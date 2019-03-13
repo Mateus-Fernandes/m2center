@@ -5,7 +5,7 @@
             Seu navegador não suporta o elemento <code>video</code>.
             </video>
     </modal>  
-    <section class="headerinterna" style="background-image:url(http://m2.local:8080/images/assets/quem-somos.jpg);">
+    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/quem-somos.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2>{{titulo_qs}}</h2>
@@ -17,7 +17,7 @@
     <section class="video">
         <div class="container">
             <div class="dozecenter imagemVideo" data-aos="flip-up">
-                <img src="http://m2.local:8080/images/assets/video.jpg" alt="" >
+                <img src="http://18.228.42.180/images/assets/video.jpg" alt="" >
                 <div class="play" @click="abremodal()"><a href="#"><i class="far fa-play-circle"></i></a></div>
             </div>
         </div>
@@ -151,7 +151,7 @@ export default {
         },
         mounted() {
                 axios
-                .get('http://m2.local:8080/api/quemsomos/lista')
+                .get('http://18.228.42.180/api/quemsomos/lista')
                 .then(response => (
                     this.titulo_qs = response.data[0].titulo_qs,
                     this.subtitulo_qs = response.data[0].subtitulo_qs,
@@ -169,7 +169,7 @@ export default {
                     ));
 
                 var _this = this;
-                axios.get('http://m2.local:8080/api/equipe/lista').then(function (response) {
+                axios.get('http://18.228.42.180/api/equipe/lista').then(function (response) {
                     _this.equipe = response.data;
                 });                         
         },
