@@ -68,26 +68,31 @@ const router = new VueRouter({
         {
             path: '/',
             name: 'home',
-            component: home
+            component: home,
+            meta: {title:'M2 Center'}
         },
         {
             path: '/quemsomos',
             name: 'quemsomos',
             component: quemsomos,
+            meta: {title:'M2 Center - Quem Somos'}
         },
         {
             path: '/servicos',
             name: 'servicos',
             component: servicos,
+            meta: {title:'M2 Center - Serviços'}
         },
         {
             path: '/blog',
             name: 'blog',
             component: blog,
+            meta: {title:'M2 Center - Blog'}
         },
         {
             path: '/blog/:id',
             component: bloginterno,
+            meta: {title:'M2 Center - Blog'}
         },                                  
     ],
 })
@@ -95,8 +100,8 @@ const router = new VueRouter({
 router.beforeResolve((to, from, next) => {
     if(to.path){
         NProgress.start()
-
     }
+    document.title = to.meta.title;
     next()
 });
 router.afterEach(() => {

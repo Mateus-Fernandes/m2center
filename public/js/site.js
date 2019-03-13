@@ -57721,22 +57721,37 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   routes: [{
     path: '/',
     name: 'home',
-    component: _components_Site_Home_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _components_Site_Home_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    meta: {
+      title: 'M2 Center'
+    }
   }, {
     path: '/quemsomos',
     name: 'quemsomos',
-    component: _components_Site_Quemsomos_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _components_Site_Quemsomos_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    meta: {
+      title: 'M2 Center - Quem Somos'
+    }
   }, {
     path: '/servicos',
     name: 'servicos',
-    component: _components_Site_Servicos_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _components_Site_Servicos_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    meta: {
+      title: 'M2 Center - Serviços'
+    }
   }, {
     path: '/blog',
     name: 'blog',
-    component: _components_Site_Blog_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _components_Site_Blog_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    meta: {
+      title: 'M2 Center - Blog'
+    }
   }, {
     path: '/blog/:id',
-    component: _components_Site_Bloginterno_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: _components_Site_Bloginterno_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    meta: {
+      title: 'M2 Center - Blog'
+    }
   }]
 });
 router.beforeResolve(function (to, from, next) {
@@ -57744,6 +57759,7 @@ router.beforeResolve(function (to, from, next) {
     nprogress__WEBPACK_IMPORTED_MODULE_1___default.a.start();
   }
 
+  document.title = to.meta.title;
   next();
 });
 router.afterEach(function () {
