@@ -3,7 +3,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <router-link :to="{ name: 'home' }"><img src="http://m2.local:8080/images/assets/logo.png" alt="Logo M2 Center"></router-link>
+                <router-link :to="{ name: 'home' }"><img src="http://18.228.42.180/images/assets/logo.png" alt="Logo M2 Center"></router-link>
             </div>
             <div class="menu">
                     <nav role="navigation" class="menuv2">
@@ -99,7 +99,7 @@
                     
                     <a href="#" class="botaoNovo" id="team">
                         <span>Call to Action</span>
-                        <img src="http://m2.local:8080/images/border.svg" alt="" class="injetar">
+                        <img src="http://18.228.42.180/images/border.svg" alt="" class="injetar">
                     </a>
                 </form>
             </div>
@@ -117,7 +117,7 @@
                         <li><router-link :to="{ name: 'servicos' }">Serviços</router-link></li>
                         <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
                         <li><a href="" class="contatofooter" v-scroll-to="'#contato'">Contato</a></li>
-                        <li><router-link :to="{ name: 'home' }"><img src="http://m2.local:8080/images/assets/logo-footer.png" alt=""></router-link>></li>
+                        <li><router-link :to="{ name: 'home' }"><img src="http://18.228.42.180/images/assets/logo-footer.png" alt=""></router-link>></li>
                     </ul>
                 </div>
             </div>
@@ -142,7 +142,7 @@ export default {
         },
         mounted() {
                 axios
-                .get('http://m2.local:8080/api/contato/lista')
+                .get('http://18.228.42.180/api/contato/lista')
                 .then(response => (
                     this.titulo_contato = response.data[0].titulo_contato,
                     this.endereco = response.data[0].endereco,

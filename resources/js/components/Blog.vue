@@ -61,7 +61,7 @@
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://m2.local:8080/admin/blog/lista').then(function (response) {
+                axios.get('http://18.228.42.180/admin/blog/lista').then(function (response) {
                     _this.blogs = response.data;
                 });
             },
@@ -70,16 +70,16 @@
             },
 
             adicionar(){
-                window.location.href = "http://m2.local:8080/admin/blog/adicionar"               
+                window.location.href = "http://18.228.42.180/admin/blog/adicionar"               
             },                        
             editar(id){
-                window.location.href = 'http://m2.local:8080/admin/blog/editar/'+id                                
+                window.location.href = 'http://18.228.42.180/admin/blog/editar/'+id                                
             },
             excluir(id){
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://m2.local:8080/admin/blog/excluir/'+id,{
+                    .post('http://18.228.42.180/admin/blog/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

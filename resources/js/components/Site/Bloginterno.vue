@@ -61,20 +61,20 @@ export default {
         mounted() {
                 var _this = this;
                 let rota = this.$route.params.id;
-                axios.get('http://m2.local:8080/api/blog/lista/'+ rota).then(function (response) {
+                axios.get('http://18.228.42.180/api/blog/lista/'+ rota).then(function (response) {
                     _this.titulo_blog = response.data.titulo_blog,
                     _this.data = response.data.created_at,
                     _this.texto_blog = response.data.texto_blog,                    
                     _this.imagem_blog = response.data.imagem_blog
                 });
-                axios.get('http://m2.local:8080/api/blog/lista').then(function (response) {
+                axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
                     _this.blog = response.data.slice(0, 2)
                 });                
                 
         },
         methods: {
             visualizar(id){
-                window.location = "http://m2.local:8080/blog/" + id;      
+                window.location = "http://18.228.42.180/blog/" + id;      
             }
         }
 }

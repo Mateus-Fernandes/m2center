@@ -1,6 +1,6 @@
 <template>
 <div>
-    <section class="headerinterna" style="background-image:url(http://m2.local:8080/images/assets/nossos-servicos.jpg);">
+    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/nossos-servicos.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2>Blog</h2>
@@ -61,13 +61,13 @@ export default {
         },
         mounted() {
                 var _this = this;
-                axios.get('http://m2.local:8080/api/blog/lista').then(function (response) {
+                axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
                     _this.blog = response.data;
                 });                         
         },
         methods: {
             visualizar(id){
-                window.location = "http://m2.local:8080/blog/" + id;      
+                window.location = "http://18.228.42.180/blog/" + id;      
             }
         }
 }
