@@ -38,16 +38,21 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 const FilePond = vueFilePond( FilePondPluginFileValidateType, FilePondPluginImagePreview );
 setOptions({
     server: {
-        url: 'http://m2.local:8080/admin/quemsomos/upload',
+        url: 'http://18.228.42.180/admin/quemsomos/upload',
         process: {
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
             },
             onerror: res => {
                 debugger
-                console.log(res)
+                console.log(res+'Deu esse erro')
             },
+
+
+
         },
+
+
     },
 })
 /**
@@ -81,6 +86,9 @@ Vue.component('blog-upload2', require('./components/UploadBlog2.vue').default);
 
 const app = new Vue({
     el: '#app',
+
+
+    
 });
 
 
