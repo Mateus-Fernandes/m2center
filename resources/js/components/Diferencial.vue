@@ -93,13 +93,16 @@
             }
         },
         
+
+
+        
         mounted: function mounted() {
             this.getVueItems();
         },
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://m2.local:8080/admin/diferencial/lista').then(function (response) {
+                axios.get('http://18.228.42.180/admin/diferencial/lista').then(function (response) {
                     _this.diferencial = response.data;
                 });
             },
@@ -114,12 +117,12 @@
                 var icone_dif_word = document.getElementsByName('icone_dif')[0].value;
                 let icone_dif_wordres;
                 if(icone_dif_word != '')
-                    icone_dif_wordres = 'http://m2.local:8080/'+icone_dif_word.replace("public", "storage");
+                    icone_dif_wordres = 'http://18.228.42.180/'+icone_dif_word.replace("public", "storage");
                 else
                     icone_dif_wordres = this.icone_dif;
                        
                 axios
-                .post('http://m2.local:8080/admin/diferencial/adicionar',{
+                .post('http://18.228.42.180/admin/diferencial/adicionar',{
                     resumo_dif: this.resumo_dif,
                     user_id: 1,
                     icone_dif: icone_dif_wordres,
@@ -139,7 +142,7 @@
                 this.editarf = true;
                 this.adicionarif = false;                  
                 axios
-                .get('http://m2.local:8080/admin/diferencial/editar/'+id)
+                .get('http://18.228.42.180/admin/diferencial/editar/'+id)
                 .then(response => (
                     this.resumo_dif = response.data.resumo_dif,
                     this.icone_dif = response.data.icone_dif,   
@@ -150,12 +153,12 @@
                 var icone_dif_word = document.getElementsByName('icone_dif')[0].value;
                 let icone_dif_wordres;
                 if(icone_dif_word != '')
-                    icone_dif_wordres = 'http://m2.local:8080/'+icone_dif_word.replace("public", "storage");
+                    icone_dif_wordres = 'http://18.228.42.180/'+icone_dif_word.replace("public", "storage");
                 else
                     icone_dif_wordres = this.icone_dif;                  
 
                 axios
-                .post('http://m2.local:8080/admin/diferencial/atualizar/'+id,{
+                .post('http://18.228.42.180/admin/diferencial/atualizar/'+id,{
                     resumo_dif: this.resumo_dif,
                     icone_dif: icone_dif_wordres,
                 })
@@ -172,7 +175,7 @@
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://m2.local:8080/admin/diferencial/excluir/'+id,{
+                    .post('http://18.228.42.180/admin/diferencial/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

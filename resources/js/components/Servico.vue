@@ -124,7 +124,7 @@
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://m2.local:8080/admin/servico/lista').then(function (response) {
+                axios.get('http://18.228.42.180/admin/servico/lista').then(function (response) {
                     _this.servico = response.data;
                 });
             },
@@ -142,18 +142,18 @@
                 var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
                 let imagem_serv_wordres;
                 if(imagem_serv_word != '')
-                    imagem_serv_wordres = 'http://m2.local:8080/'+imagem_serv_word.replace("public", "storage");
+                    imagem_serv_wordres = 'http://18.228.42.180/'+imagem_serv_word.replace("public", "storage");
                 else
                     imagem_serv_wordres = this.imagem_serv;
 
                 var icone_serv_word = document.getElementsByName('icone_serv')[0].value;
                 let icone_serv_wordres;
                 if(icone_serv_word != '')
-                    icone_serv_wordres = 'http://m2.local:8080/'+icone_serv_word.replace("public", "storage");
+                    icone_serv_wordres = 'http://18.228.42.180/'+icone_serv_word.replace("public", "storage");
                 else
                     icone_serv_wordres = this.icone_serv;                             
                 axios
-                .post('http://m2.local:8080/admin/servico/adicionar',{
+                .post('http://18.228.42.180/admin/servico/adicionar',{
                     titulo_serv: this.titulo_serv,
                     descricao_serv: this.descricao_serv,
                     resumo_serv: this.resumo_serv,
@@ -176,7 +176,7 @@
                 this.editarf = true;
                 this.adicionarif = false;                  
                 axios
-                .get('http://m2.local:8080/admin/servico/editar/'+id)
+                .get('http://18.228.42.180/admin/servico/editar/'+id)
                 .then(response => (
                     this.titulo_serv = response.data.titulo_serv,
                     this.descricao_serv = response.data.descricao_serv ,
@@ -186,23 +186,25 @@
                     this.id = response.data.id                                                    
                     ))                               
             },
+
+            
             atualizar(id){
                 var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
                 let imagem_serv_wordres;
                 if(imagem_serv_word != '')
-                    imagem_serv_wordres = 'http://m2.local:8080/'+imagem_serv_word.replace("public", "storage");
+                    imagem_serv_wordres = 'http://18.228.42.180/'+imagem_serv_word.replace("public", "storage");
                 else
                     imagem_serv_wordres = this.imagem_serv;
 
                 var icone_serv_word = document.getElementsByName('icone_serv')[0].value;
                 let icone_serv_wordres;
                 if(icone_serv_word != '')
-                    icone_serv_wordres = 'http://m2.local:8080/'+icone_serv_word.replace("public", "storage");
+                    icone_serv_wordres = 'http://18.228.42.180/'+icone_serv_word.replace("public", "storage");
                 else
                     icone_serv_wordres = this.icone_serv;                    
 
                 axios
-                .post('http://m2.local:8080/admin/servico/atualizar/'+id,{
+                .post('http://18.228.42.180/admin/servico/atualizar/'+id,{
                     titulo_serv: this.titulo_serv,
                     descricao_serv: this.descricao_serv,
                     resumo_serv: this.resumo_serv,
@@ -222,7 +224,7 @@
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://m2.local:8080/admin/servico/excluir/'+id,{
+                    .post('http://18.228.42.180/admin/servico/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    
