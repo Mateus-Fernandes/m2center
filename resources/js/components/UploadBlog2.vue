@@ -12,10 +12,17 @@
 </template>
 <script>
 
+
+
+
 export default {
     data(){
         return{
+
+            
             miniatura_blog: '',
+
+
         }
     }
 }

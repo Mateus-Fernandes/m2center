@@ -107,6 +107,10 @@
                     ))
                       
         }, 
+
+
+
+        
         methods: {
             handleFilePondInit: function() {
                 console.log('FilePond has initialized');

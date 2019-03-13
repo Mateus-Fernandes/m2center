@@ -174,7 +174,10 @@
             editar(id){
                 this.$modal.show('hello-world');
                 this.editarf = true;
-                this.adicionarif = false;                  
+                this.adicionarif = false;  
+                
+                
+                
                 axios
                 .get('http://18.228.42.180/admin/servico/editar/'+id)
                 .then(response => (
@@ -187,7 +190,7 @@
                     ))                               
             },
 
-            
+
             atualizar(id){
                 var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
                 let imagem_serv_wordres;

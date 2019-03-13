@@ -96,6 +96,9 @@
 
 <script>
 
+
+
+
     export default {
         props: ['equipes'],
         data(){
@@ -110,13 +113,16 @@
             }
         },
         
+
+
+        
         mounted: function mounted() {
             this.getVueItems();
         },
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://m2.local:8080/admin/equipe/lista').then(function (response) {
+                axios.get('http://18.228.42.180/admin/equipe/lista').then(function (response) {
                     _this.equipe = response.data;
                 });
             },
@@ -133,12 +139,12 @@
                 var foto_membro_word = document.getElementsByName('foto_membro')[0].value;
                 let foto_membro_wordres;
                 if(foto_membro_word != '')
-                    foto_membro_wordres = 'http://m2.local:8080/'+foto_membro_word.replace("public", "storage");
+                    foto_membro_wordres = 'http://18.228.42.180/'+foto_membro_word.replace("public", "storage");
                 else
                     foto_membro_wordres = this.foto_membro;
                 
                 axios
-                .post('http://m2.local:8080/admin/equipe/adicionar',{
+                .post('http://18.228.42.180/admin/equipe/adicionar',{
                     nome_membro: this.nome_membro,
                     cargo_membro: this.cargo_membro,
                     descricao_membro: this.descricao_membro,
@@ -160,7 +166,7 @@
                 this.editarf = true;
                 this.adicionarif = false;                  
                 axios
-                .get('http://m2.local:8080/admin/equipe/editar/'+id)
+                .get('http://18.228.42.180/admin/equipe/editar/'+id)
                 .then(response => (
                     this.nome_membro = response.data.nome_membro,
                     this.cargo_membro = response.data.cargo_membro ,
@@ -173,12 +179,12 @@
                 var foto_membro_word = document.getElementsByName('foto_membro')[0].value;
                 let foto_membro_wordres;
                 if(foto_membro_word != '')
-                    foto_membro_wordres = 'http://m2.local:8080/'+foto_membro_word.replace("public", "storage");
+                    foto_membro_wordres = 'http://18.228.42.180/'+foto_membro_word.replace("public", "storage");
                 else
                     foto_membro_wordres = this.foto_membro;
 
                 axios
-                .post('http://m2.local:8080/admin/equipe/atualizar/'+id,{
+                .post('http://18.228.42.180/admin/equipe/atualizar/'+id,{
                     nome_membro: this.nome_membro,
                     cargo_membro: this.cargo_membro,
                     descricao_membro: this.descricao_membro,
@@ -197,7 +203,7 @@
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://m2.local:8080/admin/equipe/excluir/'+id,{
+                    .post('http://18.228.42.180/admin/equipe/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

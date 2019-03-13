@@ -95,10 +95,12 @@
         
 
 
-        
+
         mounted: function mounted() {
             this.getVueItems();
         },
+
+        
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;

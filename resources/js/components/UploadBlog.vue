@@ -16,13 +16,16 @@ export default {
     props: ['imagem_blogs'],
     data(){
         
+
         return{
-            
             imagem_blog: '',
         }
     },
     mounted() {
         this.imagem_blog = this.imagem_blogs;
+
+
+        
     }
 }
 </script>
