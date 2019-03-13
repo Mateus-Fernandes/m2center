@@ -1,0 +1,250 @@
+.video {
+    margin-top: -196px;
+    position: relative;
+    img {
+        border-radius: 12px;
+        position: relative;
+        width: 100%;
+    }
+
+}
+
+.imagemVideo {
+    position: relative;
+    max-height: 643px;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        background: #000;
+        opacity: .5;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        border-radius: 12px;
+    }
+    &::before {
+        content: url(http://m2.local:8080/images/assets/marca.png);
+        position: absolute;
+        top: 14px;
+        right: 28px;
+        width: 156px;
+        height: 116px;
+        z-index: 3;
+    }
+}
+
+.play {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    z-index: 3;
+    font-size: 10em;
+    text-shadow: 0px 10px 40px #ff85194d;
+    a > i {
+        @include gradiente;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.quemsomostexto {
+    text-align: left;
+    padding-top: 65px;
+}
+
+.video svg {
+    position: absolute;
+    margin-top: -125px;
+    z-index: -1;
+    fill: #FFF;
+}
+
+.quem img {
+    max-height: 344px;
+    box-shadow: 10px 17px 38px 2px rgba(0,0,0,0.3);
+    margin: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure img {
+    width: 100%;
+}
+
+.quem tr {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-column-gap: 43px;
+}
+
+.quem td:first-child {
+    grid-column: span 8;
+    order: 1;
+}
+
+.quem td:last-child {
+    grid-column: span 6;
+    order: 2;
+}
+.quem td{
+    border: none;
+    font-size: $paragrafo;
+}
+
+.quem table:nth-of-type(even) td:first-child {
+    order: 2;
+}
+.quem table:nth-of-type(even) td:last-child {
+    order: 1;
+}
+
+
+.quem p {
+    font-size: $paragrafo;
+    margin: 0;
+}
+
+.quem table {
+    margin: 60px 0;
+    border: 0;
+    -webkit-border-horizontal-spacing: 0 !important;
+    -webkit-border-vertical-spacing: 0 !important;
+}
+
+.quem {
+    padding-top: 30px;
+}
+
+/* Missão, Valores , etc */
+
+.cadaMissao {
+    text-align: left;
+}
+
+.textoMissao p {
+    font-size: $paragrafo - 2px;
+    margin-top: 5px;
+    line-height: $paragrafo + 8px;
+}
+
+.textoMissao h3 {
+    font-size: 26px;
+    color: $preto;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bolaMissao {
+    height: 239px;
+    width: 79%;
+    background: #fff;
+    border: 18px solid #f5f5f5;
+    border-radius: 100%;
+    box-shadow: 3px 5px 25px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.imagemMembro {
+    max-height: 511px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 10px 17px 38px 2px rgba(0, 0, 0, 0.3); 
+    img {
+        width: 100%;
+    }
+}
+
+.membro {
+    margin-top: 60px; 
+}
+
+.textoMembro {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    margin-top: 60px;
+    position: relative;
+    z-index: -1;
+    h3 {
+        font-size: 26px;
+        color: $preto;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: $paragrafo - 2px;
+        margin-top: 18px;
+        line-height: $paragrafo + 8px;
+    }
+}
+
+.membro:nth-of-type(odd) .textoMembro {
+    padding-left: 106px;
+    padding-right: 73px;
+    left: -65px;
+}
+
+.membro:nth-of-type(even) .textoMembro {
+    padding-right: 106px;
+    padding-left: 73px;
+    right: -65px;
+}
+
+.membro:nth-of-type(even) {
+    position: relative;
+    right: 62px;
+}
+
+.equipe {
+    position: relative;
+}
+
+.equipe svg {
+    fill: #FFF;
+    position: absolute;
+    top: -10px;
+    z-index: -1;
+    margin: 0 auto;
+}
+
+.caixainterna .textocaixa {
+    padding-top: 48px;
+    padding-bottom: 46px;
+    h4 {
+        font-size: $titulo - 2px;
+        color: $preto;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}
+
+.caixainterna .logocaixa {
+    float: right;
+    padding-top: 55px;
+    padding-right: 69px;
+}
+
+.caixainterna .caixa {
+    background: #FFF;
+}
+
+.textoMembro svg {
+    top: 0;
+    left: -1px;
+}
+
+.equipe .aos-animate path {
+    stroke-dasharray: 2600;
+    stroke-dashoffset: 2600;
+    animation: dashv2 3s linear forwards;
+  }
+  
+  @keyframes dashv2 {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

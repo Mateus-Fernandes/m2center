@@ -1,0 +1,145 @@
+footer {
+    margin-top: 115px;
+    background: #262626;
+    h2 {
+        color: #FFF;
+        margin-top: 0;
+        font-size: $titulo;
+        margin-bottom: 6px;
+        padding-right: 30px;
+    }
+    p {
+        font-size: 20px;
+        color: #FFF;
+        margin-bottom: 6px;
+    }
+    a {
+        color: #FFF;
+    }
+}
+
+.iconesfooter {
+    float: left;
+}
+
+.menufooter {
+    float: right;
+}
+.cadaInput svg {
+    position: absolute;
+    top: 0;
+}
+
+.cadaInput {
+    position: relative;
+}
+
+
+/*.cadaInput path {
+    stroke-dasharray: 1281 1281;
+}*/
+
+.cadaInput input:focus + svg {
+    filter: drop-shadow(0px 1px 5px rgba(255,133,25,0.2));
+}
+
+.cadaInput input:focus + svg path {
+    stroke: url(#meugradiente);
+}
+
+.cadaInput input:focus {
+    outline:0;
+}
+
+.formulario input {
+    padding: 31px 26px;
+    width: 91%;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    position: relative;
+    border: 0;
+    background: transparent;
+    color: #FFF;
+    font-size: 19px;
+    transition: .6s;
+    position: relative;
+    z-index: 9;
+}
+
+
+.formulario button {
+    float: right;
+    color: #FFF;
+    box-shadow: 0px 10px 40px 0px rgba(255,133,25,0.2);
+}
+
+.menufooter ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        text-decoration: none;
+        float: left;
+        padding-right: 18px;
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 17px;
+            padding: 9px 16px;
+            border-radius: 30px;
+        }
+        &:hover {
+            color: $laranja;
+        }
+    }
+}
+
+.menufooter a:hover , .iconesfooter a:hover {
+    color: #ff7214;
+}
+
+.menufooter ul li:last-child {
+    padding-right: 0;
+}
+
+.menufooter .contatofooter {
+    border: 2px solid #ff7214;
+    box-shadow: 0px 10px 40px 0px rgba(255,133,25,0.1);
+}
+
+.menufooter .contatofooter:hover {
+    @include gradiente;
+    color: #FFF;
+}
+
+.menufooter img {
+    margin-top: -21px;
+}
+
+.menufooter {
+    float: right;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+.iconesfooter {
+    margin-top: 45px;
+    a {
+        font-size: 23px;
+        padding-right: 20px;
+    }
+}
+
+.formulario .botaoNovo {
+    float: right;
+    text-align: center;
+    a {
+        color: #fff;
+
+    }
+    span {
+        color: #FFF;
+    }
+}

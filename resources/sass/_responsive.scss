@@ -1,0 +1,365 @@
+/* Ipad */
+@media screen and (max-width: 992px) {
+
+  }
+  
+  /* Celular */
+  @media screen and (max-width: 600px) {
+      body {
+          overflow-x: hidden;
+      }
+      div#app {
+        overflow-x: hidden;
+    }
+      .stroke {
+          display: none;
+      }
+      .menuv2 {
+          display: block;
+      }
+      .banner h1 {
+        font-size: 38px;
+        line-height: 51px;
+    }
+    .banner h1 span:before {
+        width: 197px;
+        height: 46px;
+    }
+    .banner h1 span:last-of-type:before {
+        width: 258px;
+    }
+    .dentroBanner {
+        padding-top: 97px;
+        padding-bottom: 180px;
+    }
+    .separador1 {
+        margin-top: -183px;
+        position: relative;
+        z-index: 8;
+        height: 94.41px;
+        fill: #f0f0f0;
+    }
+    .diferencial {
+        margin-top: -38px;
+        z-index: 9;
+        position: relative;
+    }
+    .diferencial svg {
+        height: 38%;
+    }
+    .historia {
+        padding-bottom: 131px;
+    }
+    .cadaDiferencial {
+        grid-column: span 12;
+        .bola {
+            height: 177px;
+            width: 180px;
+        }
+    }
+    .cadaDiferencial:nth-of-type(odd) {
+        padding-top: 10px;
+    }
+    .bolaServico {
+        grid-column: span 12;
+    }
+    .descricaoServico {
+        grid-column: span 12;
+        text-align: center;
+    }
+    .cadaServico:nth-of-type(odd) .bolaServico {
+        order: 1;
+    }
+    .bolaServico {
+        height: 239px;
+        width: 239px;
+        margin: 0 auto;
+    }
+    .cadaBlog {
+        grid-column: span 12;
+    }
+    .textocaixa {
+        float: left;
+        padding-left: 1rem;
+        text-align: left;
+        padding-right: 1rem;
+        padding-top: 43px;
+        padding-bottom: 33px;
+    }
+    .boxpadding {
+        padding: 0 3%;
+    }
+    .textocaixa h2 {
+        font-size: 32px;
+    }
+    .logocaixa {
+        text-align: center;
+        padding-right: 0;
+    }
+    svg.boxrodape {
+        position: absolute;
+        z-index: -1;
+        fill: #262626;
+        height: 235px;
+        top: 320px;
+    }
+    .localizacao {
+        grid-column: span 12;
+    }
+    .formulario {
+        grid-column: span 12;
+    }
+    footer h2 {
+        font-size: 28px;
+    }
+    footer p {
+        font-size: 17px;
+        text-align: center;
+    }
+    .formulario input {
+        padding: 14px 26px;
+        font-size: 14px;
+    }
+    .iconesfooter {
+        margin-top: 34px;
+        width: 100%;
+    }
+    .menufooter ul li {
+        text-decoration: none;
+        float: left;
+        padding-right: 13px;
+        padding-bottom: 40px;
+    }
+    .menufooter {
+        float: right;
+        margin-top: 50px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // Quem Somos
+    .quem p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .bolaMissao {
+        grid-column: span 12;
+    }
+    .textoMissao {
+        grid-column: span 12;
+        text-align: center;
+    }
+    .bolaMissao {
+        height: 225px;
+        width: 225px;
+        margin: 0 auto;
+    }
+    .cadaMissao:nth-of-type(odd) .bolaMissao {
+        order: 1;
+    }
+    .imagemMembro {
+        grid-column: span 12;
+        padding: 0 2rem;
+        box-shadow: none;
+    }
+    .textoMembro {
+        grid-column: span 12;
+    }
+    .membro:nth-of-type(odd) .textoMembro {
+        padding-left: 28px;
+        padding-right: 17px;
+        left: 0;
+        margin-top: -25px;
+    }
+    .textoMembro h3 {
+        font-size: 23px;
+    }
+    .textoMembro p {
+        font-size: 14px;
+        margin-top: 12px;
+        line-height: 25px;
+    }
+    .textoMembro svg {
+        height: 95%;
+        left: 8px;
+    }
+    .membro:nth-of-type(even) .imagemMembro {
+        order: 1;
+    }
+    .membro:nth-of-type(even) {
+        position: relative;
+        right: 0;
+    }
+    .membro:nth-of-type(even) .textoMembro {
+        padding-right: 28px;
+        padding-left: 30px;
+        right: 0;
+    }
+    .membro:nth-of-type(even) .textoMembro {
+        padding-right: 28px;
+        padding-left: 30px;
+        right: 0;
+        margin-top: -25px;
+    }
+    .imagemVideo {
+        position: relative;
+        max-height: 179px;
+        overflow: hidden;
+    }
+    .caixainterna .textocaixa h4 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .caixainterna .logocaixa {
+        padding-top: 1px;
+        float: none;
+        padding-bottom: 41px;
+        padding-right: 0;
+    }
+    .caixainterna svg.boxrodape {
+        position: absolute;
+        z-index: -1;
+        fill: #262626;
+        top: 202px;
+    }
+    .caixainterna {
+        position: relative;
+        margin-top: 8px;
+    }
+    .textoMissao p {
+        font-size: 18px;
+    }
+    .headerinterna {
+        padding-top: 12px;
+    }
+    .headerinterna h2 {
+        font-size: 39px;
+    }
+    .headerinterna p {
+        font-size: 26px;
+    }
+    .play {
+        position: absolute;
+        top: 27%;
+        left: 43%;
+        z-index: 3;
+        font-size: 4em;
+        text-shadow: 0px 10px 40px #ff85194d;
+    }
+    .quem tr {
+        display: flex;
+        grid-template-columns: repeat(14, 1fr);
+        grid-column-gap: 43px;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    .quem table:nth-of-type(even) td:first-child {
+        order: 2;
+    }
+    .quem table:nth-of-type(even) td:last-child {
+        order: 2;
+    }
+    .quem p {
+        font-size: 14px;
+        margin-bottom: 21px;
+    }
+    .quem td {
+        font-size: 14px;
+    }
+    .quem table {
+        margin-top: 5px;
+        margin-bottom: 40px;
+        font-size: 14px;
+        margin-bottom: 21px;
+    }
+    .quem img {
+        max-height: 200px;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    /* Serviços */
+    .imagemServicos h2 {
+        position: absolute;
+        top: -30px;
+        font-size: 20px;
+    }
+    .cadaServicos:nth-of-type(odd) .imagemServicos h2 {
+        left: 28px;
+    }
+    .imagemServicos {
+        left: 8px;
+        max-height: 110px;
+    }
+    .textoServicos p {
+        font-size: 17px;
+        line-height: 21px;
+        text-align: justify;
+    }
+    .textoServicos {
+        padding-left: 17px;
+        padding-right: 4px;
+        padding-top: 57px;
+        padding-bottom: 50px;
+        margin-left: -12px;
+        margin-top: -41px;
+        border-radius: 7px;
+    }
+    .imagemServicos img {
+        width: 100%;
+        height: 110px;
+    }
+    .cadaServicos:nth-of-type(even) .imagemServicos h2 {
+        right: 28px;
+    }
+    .cadaServicos:nth-of-type(even) .textoServicos {
+        margin-right: 13px;
+        margin-left: 13px;
+    }
+    section.listagemServicos {
+        margin-top: -77px;
+    }
+    /*Blog */
+    .bolaBlog {
+        grid-column: span 14;
+        margin: 0 auto;
+    }
+    .textoBlog p {
+        font-size: 17px;
+    }
+    .textoBlog {
+        grid-column: span 14;
+        text-align: center;
+        padding-left: 0;
+    }
+    .leiamore {
+        font-size: 17px;
+        float: none;
+        padding: 5px 15px;
+        margin: 0 auto;
+    }
+    /* blog interna */
+    .titulo h2:before {
+        height: 100%;
+    }
+    .textodaPublicacao {
+        grid-column: span 12;
+    }
+    .sidebar {
+        padding-left: 0rem;
+        grid-column: span 12;
+    }
+    .router-link-exact-active {
+        color: #FFF;
+    }
+    .textoBlog h3 {
+        font-size: 23px;
+    }
+    .conteudoBlog h2 {
+        font-size: 24px;
+    }
+    .cadaSidebar h3 {
+        font-size: 23px;
+    }
+  }
+  

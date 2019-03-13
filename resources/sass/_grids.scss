@@ -1,0 +1,164 @@
+$centralizado:  1212px;
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: $centralizado;
+    margin: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 21px;
+}
+
+.centralizar {
+    max-width: $centralizado;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .centralizar {
+        padding: 0 1rem;
+    }
+}
+
+.espacamentoblog {
+    grid-column-gap: 25px;
+}
+
+.menu {
+    padding-top: 22px;
+    grid-column: span 7;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.logo {
+    padding-top: 22px;
+    padding-bottom: 20px;
+    grid-column: span 5;
+}
+
+.dozecenter {
+    grid-column: span 12;
+    text-align: center;
+}
+
+.quatro {
+    grid-column: span 3;
+}
+
+.cadaServico {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 3px;
+    padding: 0 20px;
+}
+
+.bolaServico {
+    grid-column: span 3;
+    order: 1;
+}
+
+.descricaoServico {
+    grid-column: span 9;
+    order:2;
+}
+
+.cadaServico:nth-of-type(odd) .bolaServico {
+    order: 2;
+}
+.cadaServico:nth-of-type(odd) .descricaoServico {
+    order: 1;
+}
+
+.cadaBlog {
+    grid-column: span 4;
+}
+
+.localizacao {
+    grid-column: span 6;
+}
+
+.formulario {
+    grid-column: span 6;
+}
+
+.cadaMissao {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 20px;
+}
+
+.bolaMissao {
+    grid-column: span 3;
+    order: 1;
+}
+
+.textoMissao {
+    grid-column: span 9;
+    order:2;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.cadaMissao:nth-of-type(odd) .bolaMissao {
+    order: 2;
+}
+.cadaMissao:nth-of-type(odd) .textoMissao {
+    order: 1;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.membro {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+}
+
+.imagemMembro {
+    grid-column: span 3;
+    order: 1;
+}
+
+.textoMembro {
+    grid-column: span 8;
+    order: 2;
+}
+
+.membro:nth-of-type(even) .imagemMembro {
+    order: 2;
+}
+
+.membro:nth-of-type(even) .textoMembro {
+    order: 1;
+}
+
+.cadaPost {
+    grid-template-columns: repeat(14, 1fr);
+    display: grid;
+}
+
+.bolaBlog {
+    grid-column: span 3;
+}
+
+.textoBlog {
+    grid-column: span 11;
+}
+
+.conteudodaPublicacao {
+    grid-template-columns: repeat(11, 1fr);
+    display: grid;
+}
+
+.textodaPublicacao {
+    grid-column: span 8;
+}
+
+.sidebar {
+    grid-column: span 3;
+}
