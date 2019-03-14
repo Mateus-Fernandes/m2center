@@ -336,6 +336,50 @@ path#fillup {
     @include gradiente;
     color: #FFF;
 }
+.calltoaction {
+    background-size: 100%;
+    background-image: transparent;
+    cursor: pointer;
+    color: #333;
+    display: inline-block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 5px solid #d0d0d000;
+    border-image: url(http://18.228.42.180/images/border02.svg) 47% round;
+    padding: 22px 34px;
+    background: transparent;
+    border-image-width: 100%;
+    border-image-outset: inherit;
+    position: relative;
+    z-index: 100;
+    transition: .3s all linear;
+}
+
+.calltoaction:before {
+border-radius: inherit;
+background-image: linear-gradient(to right, #ff4614 0%,#ff8214 100%);
+content: '';
+display: block;
+height: 101%;
+position: absolute;
+top: -1px;
+left: -1px;
+opacity: 0;
+width: 100%;
+z-index: -100;
+border-radius: 34px;
+transition: opacity 0.6s;
+}
+
+.calltoaction:hover:before {
+    opacity: 1;
+}
+.calltoaction:hover {
+    color: #FFF;
+}
 
 // Nossa História
 img.abs {

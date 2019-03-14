@@ -9,10 +9,7 @@
             <div class="dozecenter conteudoHistoria">
                 <h2 data-aos="zoom-in">Nossa História</h2>
                 <p data-aos="zoom-out">Há quatro anos no mercado de vendas de alta performance, somos uma empresa de aquisição de clientes baseada em performance que usa tecnologia e dados para proporcionar experiências de <br> compra mais inteligentes e otimizadas.</p>
-                <router-link :to="{ name: 'quemsomos' }"><a href="#" class="botaoNovo" id="team" data-aos="fade-in">
-                    <span>Call to Action</span>
-                    <img src="http://18.228.42.180/images/border.svg" alt="" class="injetar" ref="myid"></a></router-link >
-                </a>
+                <router-link :to="{ name: 'quemsomos' }"><a href="#" class="calltoaction" data-aos="fade-in">Call to Action</a></router-link>
             </div>
         </div>
     </section>
@@ -57,10 +54,7 @@
                 </div>
             </div>
             <div class="dozecenter botaomargin">
-                     <router-link :to="{ name: 'servicos' }"><a href="#" class="botaoNovo" id="team">
-                        <span>Call to Action</span>
-                        <img src="http://18.228.42.180/images/border.svg" alt="" class="injetar">
-                    </a></router-link>
+                     <router-link :to="{ name: 'servicos' }"><a href="#" class="calltoaction" data-aos="fade-in">Call to Action </a></router-link>
             </div>
         </div>
     </section>
@@ -76,10 +70,7 @@
                 <a href="#" @click="visualizar(b.id)" class="botaoPrincipal leiamais">Leia Mais</a>
             </div>
             <div class="dozecenter" style="margin-top: 45px;" data-aos="flip-up">
-                    <router-link :to="{ name: 'blog' }"><a class="botaoNovo" id="team">
-                        <span>Call to Action</span>
-                        <img src="http://18.228.42.180/images/border.svg" alt="" class="injetar">
-                    </a></router-link>
+                    <router-link :to="{ name: 'blog' }"><a href="#" class="calltoaction" data-aos="fade-in">Call to Action</a></router-link>
             </div>
         </div>
     </section>

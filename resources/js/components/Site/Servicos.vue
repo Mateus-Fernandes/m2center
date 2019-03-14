@@ -42,7 +42,7 @@
                     <h4>Conheça mais nossa história</h4>
                 </div>
                 <div class="logocaixa">
-                    <router-link :to="{ name: 'quemsomos' }"><a href="#" class="botaoPrincipal">Call to action</a></router-link>
+                    <router-link :to="{ name: 'quemsomos' }"><a href="#" class="calltoaction">Call to action</a></router-link>
                 </div>
             </div>
         </div>

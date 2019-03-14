@@ -34,7 +34,7 @@
                     <h4>Conheça mais nossos Serviços</h4>
                 </div>
                 <router-link :to="{ name: 'servicos' }"><div class="logocaixa">
-                    <a href="#" class="botaoPrincipal">Call to action</a>
+                    <a href="#" class="calltoaction">Call to action</a>
                 </div></router-link>
             </div>
         </div>

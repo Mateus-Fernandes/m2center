@@ -1,6 +1,106 @@
 /* Ipad */
-@media screen and (max-width: 992px) {
-
+@media screen and (max-width: 1028px) {
+    .container {
+        padding: 0 2rem;
+    }
+    .centralizar {
+        padding: 0 2rem;
+    }
+    .logo {
+        grid-column: span 3;
+    }
+    .menu {
+        grid-column: span 9;
+    }
+    nav ul li {
+        display: inline-block;
+        padding-right: 11px;
+    }
+    .contato > span {
+        background: #fff;
+        display: block;
+        padding: 8px 13px;
+        border-radius: 30px;
+    }
+    .banner h1 {
+        font-size: 40px;
+    }
+    .cadaDiferencial {
+        grid-column: span 6;
+    }
+    .cadaDiferencial .bola {
+        width: 176px;
+        height: 176px;
+    }
+    .bolaServico {
+        grid-column: span 4;
+    }
+    .descricaoServico {
+        grid-column: span 8;
+        padding-left: 24px;
+    }
+    .bolaServico {
+        grid-column: span 4;
+        width: 177px;
+        height: 190px;
+    }
+    
+    .cadaBlog h3 {
+        font-size: 17px;
+    }
+    .logocaixa img {
+        width: 22%;
+        padding-top: 21px;
+    }
+    .textocaixa h2 {
+        font-size: 24px;
+    }
+    .textocaixa h3 {
+        font-size: 24px;
+    }
+    .formulario input {
+        padding: 19px 26px;
+    }
+    .bolaMissao {
+        height: 157px;
+    }
+    .imagemMembro {
+        max-height: 327px;
+    }
+    .textoMembro svg {
+        top: 0;
+        left: -1px;
+        height: 97%;
+    }
+    .caixainterna .logocaixa {
+        float: none;
+        padding-top: 50px;
+        margin: 0 auto;
+        padding-bottom: 44px;
+        text-align: center;
+        padding-right: 0;
+    }
+    .menufooter ul li:last-child {
+        padding-right: 0;
+        display: none;
+    }
+    .menufooter ul li a {
+        padding: 9px 4px;
+    }
+    .iconesfooter {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+    .textoBlog {
+        grid-column: span 10;
+        padding-left: 63px;
+    }
+    .bolaBlog {
+        grid-column: span 4;
+    }
+    .textoBlog h3 {
+        font-size: 26px;
+    }
   }
   
   /* Celular */

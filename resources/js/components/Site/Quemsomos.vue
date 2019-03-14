@@ -117,7 +117,7 @@
                     <h4>Conheça mais nossos Serviços</h4>
                 </div>
                 <div class="logocaixa">
-                    <router-link :to="{ name: 'servicos' }"><a href="#" class="botaoPrincipal">Call to action</a></router-link>
+                    <router-link :to="{ name: 'servicos' }"><a href="#" class="calltoaction">Call to action</a></router-link>
                 </div>
             </div>
         </div>

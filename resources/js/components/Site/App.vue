@@ -97,10 +97,7 @@
                            </svg>
                     </div>
                     
-                    <a href="#" class="botaoNovo" id="team">
-                        <span>Call to Action</span>
-                        <img src="http://18.228.42.180/images/border.svg" alt="" class="injetar">
-                    </a>
+                    <a href="#" class="calltoaction" data-aos="fade-in">Call to Action</a>
                 </form>
             </div>
             <div class="dozecenter">
