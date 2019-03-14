@@ -1,7 +1,7 @@
 <template>
 <div>
         <div class="banner">
-            <carousel :data="data"></carousel>
+            <carousel :data="data" :slideOnSwipe="false"></carousel>
         </div>
 
     <section class="historia">

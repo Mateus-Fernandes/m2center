@@ -2047,6 +2047,11 @@ section.conteudoBlog {
     width: 180px;
   }
 
+  .video-overlay-play-button i {
+    font-size: 3em;
+    top: 30%;
+  }
+
   .cadaDiferencial:nth-of-type(odd) {
     padding-top: 10px;
   }
@@ -2101,7 +2106,7 @@ section.conteudoBlog {
     z-index: -1;
     fill: #262626;
     height: 235px;
-    top: 320px;
+    top: 200px;
   }
 
   .localizacao {
@@ -2247,7 +2252,11 @@ section.conteudoBlog {
     position: absolute;
     z-index: -1;
     fill: #262626;
-    top: 202px;
+    top: 85px;
+  }
+
+  div#contato .calltoaction {
+    font-size: 13px;
   }
 
   .caixainterna {

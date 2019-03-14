@@ -40859,7 +40859,7 @@ var render = function() {
     _c(
       "div",
       { staticClass: "banner" },
-      [_c("carousel", { attrs: { data: _vm.data } })],
+      [_c("carousel", { attrs: { data: _vm.data, slideOnSwipe: false } })],
       1
     ),
     _vm._v(" "),
