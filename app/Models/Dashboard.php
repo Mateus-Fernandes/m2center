@@ -14,6 +14,7 @@ class Dashboard extends Model
         'titulo_pag_servicos',
         'descricao_pag_servicos',
         'titulo_pag_blog',
-        'descricao_pag_blog'
+        'descricao_pag_blog',
+
     ];
 }
