@@ -8,7 +8,7 @@
         <div class="container">
             <div class="dozecenter conteudoHistoria">
                 <h2 data-aos="zoom-in">Nossa História</h2>
-                <p data-aos="zoom-out">Há quatro anos no mercado de vendas de alta performance, somos uma empresa de aquisição de clientes baseada em performance que usa tecnologia e dados para proporcionar experiências de <br> compra mais inteligentes e otimizadas.</p>
+                <p data-aos="zoom-out">{{historia_inicial}}</p>
                 <!-- <router-link :to="{ name: 'quemsomos' }"><a href="#" class="calltoaction fundopreto" data-aos="fade-in">Call to Action</a></router-link> -->
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="dozecenter titulo">
                 <h2 class="preenchendo" data-aos="fade-in" data-aos-id="super-duper">Diferencial</h2>
-                <p>Quando pensamos em falar de nosso diferencial, com certeza é nosso atendimento. E só conseguimos atingir este diferencial, pois temos todo um time de alta performance de atendimento.</p>
+                <p>{{texto_diferencial_i}}</p>
             </div>
             <div class="quatro cadaDiferencial" data-aos="fade-right" v-for="u in diferencial">
                 <div class="bola">
@@ -128,7 +128,19 @@ export default {
                 .get('http://18.228.42.180/api/blog/lista')
                 .then(response => (
                     this.blog = response.data                                                                      
-                    )); 
+                    ));
+
+                axios
+                .get('http://18.228.42.180/api/dashboard/lista')
+                .then(response => (
+                    this.texto_diferencial_i = response.data[0].texto_diferencial_i                                                                      
+                    ));
+                    
+                axios
+                .get('http://18.228.42.180/api/quemsomos/lista')
+                .then(response => (
+                    this.historia_inicial = response.data[0].historia_inicial                                                                      
+                    ));                    
                                                                                   
         },        
         methods: {

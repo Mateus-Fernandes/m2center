@@ -1875,6 +1875,10 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getVueItems: function getVueItems() {
       var _this = this;
+
+      axios.get('http://18.228.42.180/admin/blog/lista').then(function (response) {
+        _this.blogs = response.data;
+      });
     },
     handleFilePondInit: function handleFilePondInit() {
       console.log('');

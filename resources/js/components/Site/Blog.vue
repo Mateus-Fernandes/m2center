@@ -3,8 +3,8 @@
     <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/nossos-servicos.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
-                <h2>Blog</h2>
-                <p>Saiba tudo sobre tecnologia, vendas e conversão. </p>
+                <h2>{{titulo_pag_blog}}</h2>
+                <p>{{descricao_pag_blog}}</p>
             </div>
         </div>
     </section>
@@ -63,7 +63,14 @@ export default {
                 var _this = this;
                 axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
                     _this.blog = response.data;
-                });                         
+                });
+
+                axios
+                .get('http://18.228.42.180/api/dashboard/lista')
+                .then(response => (
+                    this.titulo_pag_blog = response.data[0].titulo_pag_blog,
+                     this.descricao_pag_blog = response.data[0].descricao_pag_blog                                                                     
+                    ));                                         
         },
         methods: {
             visualizar(id){

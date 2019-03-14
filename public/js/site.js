@@ -2815,10 +2815,15 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    var _this2 = this;
+
     var _this = this;
 
     axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
       _this.blog = response.data;
+    });
+    axios.get('http://18.228.42.180/api/dashboard/lista').then(function (response) {
+      return _this2.titulo_pag_blog = response.data[0].titulo_pag_blog, _this2.descricao_pag_blog = response.data[0].descricao_pag_blog;
     });
   },
   methods: {
@@ -3047,6 +3052,12 @@ __webpack_require__.r(__webpack_exports__);
     });
     axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
       return _this.blog = response.data;
+    });
+    axios.get('http://18.228.42.180/api/dashboard/lista').then(function (response) {
+      return _this.texto_diferencial_i = response.data[0].texto_diferencial_i;
+    });
+    axios.get('http://18.228.42.180/api/quemsomos/lista').then(function (response) {
+      return _this.historia_inicial = response.data[0].historia_inicial;
     });
   },
   methods: {
@@ -3326,10 +3337,15 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    var _this2 = this;
+
     var _this = this;
 
     axios.get('http://18.228.42.180/api/servico/lista').then(function (response) {
       _this.servico = response.data;
+    });
+    axios.get('http://18.228.42.180/api/dashboard/lista').then(function (response) {
+      return _this2.titulo_pag_servicos = response.data[0].titulo_pag_servicos, _this2.descricao_pag_servicos = response.data[0].descricao_pag_servicos;
     });
   }
 });
@@ -40552,7 +40568,32 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "section",
+      {
+        staticClass: "headerinterna",
+        staticStyle: {
+          "background-image":
+            "url(http://18.228.42.180/images/assets/nossos-servicos.jpg)"
+        }
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            {
+              staticClass: "dozecenter tituloInterna",
+              attrs: { "data-aos": "flip-down" }
+            },
+            [
+              _c("h2", [_vm._v(_vm._s(_vm.titulo_pag_blog))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.descricao_pag_blog))])
+            ]
+          )
+        ])
+      ]
+    ),
     _vm._v(" "),
     _c("section", { staticClass: "blogListagem" }, [
       _c(
@@ -40587,7 +40628,7 @@ var render = function() {
         "div",
         { staticClass: "centralizar" },
         [
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
           _vm._l(_vm.blog, function(u) {
             return _c(
@@ -40659,39 +40700,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      {
-        staticClass: "headerinterna",
-        staticStyle: {
-          "background-image":
-            "url(http://18.228.42.180/images/assets/nossos-servicos.jpg)"
-        }
-      },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "div",
-            {
-              staticClass: "dozecenter tituloInterna",
-              attrs: { "data-aos": "flip-down" }
-            },
-            [
-              _c("h2", [_vm._v("Blog")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v("Saiba tudo sobre tecnologia, vendas e conversão. ")
-              ])
-            ]
-          )
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -40853,7 +40861,19 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _vm._m(0),
+    _c("section", { staticClass: "historia" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "dozecenter conteudoHistoria" }, [
+          _c("h2", { attrs: { "data-aos": "zoom-in" } }, [
+            _vm._v("Nossa História")
+          ]),
+          _vm._v(" "),
+          _c("p", { attrs: { "data-aos": "zoom-out" } }, [
+            _vm._v(_vm._s(_vm.historia_inicial))
+          ])
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "svg",
@@ -40886,7 +40906,18 @@ var render = function() {
         "div",
         { staticClass: "container" },
         [
-          _vm._m(1),
+          _c("div", { staticClass: "dozecenter titulo" }, [
+            _c(
+              "h2",
+              {
+                staticClass: "preenchendo",
+                attrs: { "data-aos": "fade-in", "data-aos-id": "super-duper" }
+              },
+              [_vm._v("Diferencial")]
+            ),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.texto_diferencial_i))])
+          ]),
           _vm._v(" "),
           _vm._l(_vm.diferencial, function(u) {
             return _c(
@@ -40945,7 +40976,7 @@ var render = function() {
         "div",
         { staticClass: "container" },
         [
-          _vm._m(2),
+          _vm._m(0),
           _vm._v(" "),
           _vm._l(_vm.servico, function(s) {
             return _c(
@@ -40982,7 +41013,7 @@ var render = function() {
         "div",
         { staticClass: "container espacamentoblog" },
         [
-          _vm._m(3),
+          _vm._m(1),
           _vm._v(" "),
           _vm._l(_vm.blog, function(b) {
             return _c(
@@ -41021,7 +41052,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("section", { staticClass: "box" }, [
-      _vm._m(4),
+      _vm._m(2),
       _vm._v(" "),
       _c(
         "svg",
@@ -41054,49 +41085,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "historia" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "dozecenter conteudoHistoria" }, [
-          _c("h2", { attrs: { "data-aos": "zoom-in" } }, [
-            _vm._v("Nossa História")
-          ]),
-          _vm._v(" "),
-          _c("p", { attrs: { "data-aos": "zoom-out" } }, [
-            _vm._v(
-              "Há quatro anos no mercado de vendas de alta performance, somos uma empresa de aquisição de clientes baseada em performance que usa tecnologia e dados para proporcionar experiências de "
-            ),
-            _c("br"),
-            _vm._v(" compra mais inteligentes e otimizadas.")
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "dozecenter titulo" }, [
-      _c(
-        "h2",
-        {
-          staticClass: "preenchendo",
-          attrs: { "data-aos": "fade-in", "data-aos-id": "super-duper" }
-        },
-        [_vm._v("Diferencial")]
-      ),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "Quando pensamos em falar de nosso diferencial, com certeza é nosso atendimento. E só conseguimos atingir este diferencial, pois temos todo um time de alta performance de atendimento."
-        )
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -41579,7 +41567,32 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "section",
+      {
+        staticClass: "headerinterna",
+        staticStyle: {
+          "background-image":
+            "url(http://18.228.42.180/images/assets/nossos-servicos.jpg)"
+        }
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            {
+              staticClass: "dozecenter tituloInterna",
+              attrs: { "data-aos": "flip-down" }
+            },
+            [
+              _c("h2", [_vm._v(_vm._s(_vm.titulo_pag_servicos))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.descricao_pag_servicos))])
+            ]
+          )
+        ])
+      ]
+    ),
     _vm._v(" "),
     _c("section", { staticClass: "listagemServicos" }, [
       _c(
@@ -41695,41 +41708,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      {
-        staticClass: "headerinterna",
-        staticStyle: {
-          "background-image":
-            "url(http://18.228.42.180/images/assets/nossos-servicos.jpg)"
-        }
-      },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "div",
-            {
-              staticClass: "dozecenter tituloInterna",
-              attrs: { "data-aos": "flip-down" }
-            },
-            [
-              _c("h2", [_vm._v("Nossos Serviços")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v("Prepare-se para os resultados do Marketing de Negócios")
-              ])
-            ]
-          )
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
