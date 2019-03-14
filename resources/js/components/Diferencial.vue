@@ -4,6 +4,33 @@
         <div class="col-lg-12">
             <div class="box">
                 <div class="box-header">
+                    <h3 class="box-title">Editar Informações de Texto do item</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form @submit.prevent="editarpags">
+                            <div class="group no-bottom">      
+                                <textarea-autosize
+                                placeholder="Type something here..."
+                                ref="someName"
+                                v-model="texto_diferencial_i"
+                                :min-height="30"
+                                :max-height="350"
+                                ></textarea-autosize>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Resumo Diferencial ( Página Inicial )</label>
+                            </div>
+                            <button type="submit" class="btn editarpag">Atualizar página</button>
+                            <FlashMessage></FlashMessage>
+                            </form>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-header">
                     <h3 class="box-title">Listagem de Diferenciais Cadastrados</h3>
                 </div>
                 <div class="box-body">
@@ -88,6 +115,7 @@
                 diferencial:[],
                 icone_dif: '',
                 resumo_dif: '',
+                texto_diferencial_i: '',
                 editarf: false,
                 adicionarif: false,
             }
@@ -98,6 +126,11 @@
 
         mounted: function mounted() {
             this.getVueItems();
+            axios
+            .get('http://18.228.42.180/admin/dashboard/lista')
+            .then(response => (
+                this.texto_diferencial_i = response.data[0].texto_diferencial_i                                            
+                ))            
         },
 
         
@@ -108,6 +141,23 @@
                     _this.diferencial = response.data;
                 });
             },
+            editarpags(e) {
+                e.preventDefault();
+                let currentObj = this;
+                axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+                    texto_diferencial_i: this.texto_diferencial_i
+                })
+                .then(function (response) {
+                    currentObj.output = response.data;
+                    currentObj.flashMessage.show({status: 'success', title: 'Página atualizada com sucesso', message: 'a página Blog foi atualizada.'})
+                })
+                .catch(function (err) {
+                    console.error("Error response:");
+                    console.error(err.response);
+                    console.error(err.response);
+                    console.error(err.response);
+                });
+            },             
             adicionar(){
                 this.icone_dif = '',
                 this.resumo_dif = '',                  

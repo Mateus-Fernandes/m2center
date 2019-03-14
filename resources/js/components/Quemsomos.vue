@@ -18,7 +18,20 @@
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Subtítulo da Página</label>
-                            </div>                             
+                            </div>
+                            <div class="group no-bottom">      
+                                <textarea-autosize
+                                placeholder="Type something here..."
+                                ref="someName"
+                                v-model="historia_inicial"
+                                :min-height="30"
+                                :max-height="350"
+                                @blur.native="onBlurTextarea"
+                                ></textarea-autosize>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>História ( Resumo Página Inicial )</label>
+                            </div>                                                         
                     </div>
                 </div>
                 <div class="box">
@@ -208,6 +221,7 @@
                 video: '',
                 missao: '',
                 i_missao: '',
+                historia_inicial: '',
                 valores: '',
                 i_valores: '',
                 objetivo: '',
@@ -225,6 +239,7 @@
                     this.titulo_qs = response.data[0].titulo_qs,
                     this.subtitulo_qs = response.data[0].subtitulo_qs,
                     this.historia = response.data[0].historia,
+                    this.historia_inicial = response.data[0].historia_inicial,
                     this.video = response.data[0].video,
                     this.missao = response.data[0].missao,
                     this.i_missao = response.data[0].i_missao,
@@ -293,6 +308,7 @@
                     historia: document.getElementsByName('historiatexto')[0].value,
                     video: videowordres,
                     missao: this.missao,
+                    historia_inicial: this.historia_inicial,
                     i_missao: i_missaowordres,
                     valores: this.valores,
                     i_valores: i_valoreswordres,
@@ -313,6 +329,9 @@
                 });
             }            
         },
+        watch:{
+            n
+        }
             
 
     }

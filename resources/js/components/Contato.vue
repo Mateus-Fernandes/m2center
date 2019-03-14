@@ -32,7 +32,13 @@
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Bairro</label>
-                                </div>                                                                  
+                                </div>
+                                <div class="group">      
+                                    <input type="text" required v-model="texto_rodape_inicial">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Texto do Rodapé das Páginas</label>
+                                </div>                                                                                                   
                             </div>
                             <div class="col-md-6">
                                 <div class="group">      
@@ -85,6 +91,7 @@
                 endereco: '',
                 cidade: '',
                 bairro: '',
+                texto_rodape_inicial: '',
                 cep: '',
                 email: '',
                 funcionamento_semana: '',
@@ -100,6 +107,7 @@
                     this.endereco = response.data[0].endereco,
                     this.cidade = response.data[0].cidade,
                     this.bairro = response.data[0].bairro,
+                    this.texto_rodape_inicial = response.data[0].texto_rodape_inicial,
                     this.cep = response.data[0].cep,
                     this.email = response.data[0].email,
                     this.funcionamento_semana = response.data[0].funcionamento_semana,
@@ -125,6 +133,7 @@
                     endereco: this.endereco,
                     cidade: this.cidade,
                     bairro: this.bairro,
+                    texto_rodape_inicial: this.texto_rodape_inicial,
                     cep: this.cep,
                     email: this.email,
                     funcionamento_semana: this.funcionamento_semana,

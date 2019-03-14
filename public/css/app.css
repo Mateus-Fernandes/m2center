@@ -10679,6 +10679,17 @@ h6,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+button.btn.editarpag {
+  color: #FFF;
+  border-radius: 33px;
+  padding: 10px 30px;
+  color: #fff !important;
+  background: linear-gradient(to right, #ff4614 0%, #ff7214 100%) !important;
+  font-weight: bold !important;
+  margin-right: 17px !important;
+  border-left: 3px solid #ff6603 !important;
+}
+
 .box {
   position: relative;
   border-radius: 5px;
@@ -11099,5 +11110,70 @@ section.content img {
 
 .skin-purple #app {
   overflow-y: hidden !important;
+}
+
+/*  lOGIN */
+
+.login-page,
+.register-page {
+  background: url(http://18.228.42.180/images/bg-admin.jpg);
+}
+
+.login-box,
+.register-box {
+  width: 450px;
+  margin: 7% auto;
+}
+
+.login-box-body,
+.register-box-body {
+  background: #3a3a3abd;
+  padding: 20px;
+  border-top: 0;
+  color: #fff;
+}
+
+.auth-links a {
+  color: #FFF;
+}
+
+button.btn.btn-primary.btn-block.btn-flat {
+  margin-left: 19px;
+  background: #ff7214;
+  border-radius: 40px;
+  border: 0;
+  padding: 10px 40px;
+}
+
+.login-page .form-control {
+  display: block;
+  width: 100%;
+  height: 55px;
+  padding: 5px 14px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #252525d6;
+  background-clip: padding-box;
+  border: 1px solid #262729;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.login-page .form-control input::-webkit-input-placeholder {
+  color: #FFF;
+}
+
+.login-page .form-control input:-ms-input-placeholder {
+  color: #FFF;
+}
+
+.login-page .form-control input::-ms-input-placeholder {
+  color: #FFF;
+}
+
+.login-page .form-control input::placeholder {
+  color: #FFF;
 }
 

@@ -21,6 +21,7 @@ class Quemsomos extends Model
         'i_valores',
         'objetivo',
         'i_objetivo',
+        'historia_inicial',
         'meta',
         'i_meta'
     ];

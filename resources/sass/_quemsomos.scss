@@ -13,26 +13,69 @@
     position: relative;
     max-height: 643px;
     overflow: hidden;
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        background: #000;
-        opacity: .5;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        border-radius: 12px;
-    }
     &::before {
         content: url(http://18.228.42.180/images/assets/marca.png);
         position: absolute;
         top: 14px;
+        mix-blend-mode: luminosity;
         right: 28px;
         width: 156px;
         height: 116px;
         z-index: 3;
     }
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper > video {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.video-wrapper > video.has-media-controls-hidden::-webkit-media-controls {
+    display: none;
+}
+
+.video-overlay-play-button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px calc(50% - 50px);
+    position: absolute;
+    top: 0;
+    z-index: 4 !important;
+    margin-top: 0 !important;
+    left: 0;
+    display: block;
+    opacity: 0.95;
+    cursor: pointer;
+    background-image: linear-gradient(transparent, #000);
+    transition: opacity 150ms;
+}
+    .video-overlay-play-button:hover {
+        opacity: 1;
+    }
+
+    .video-overlay-play-button.is-hidden {
+    display: none;
+    }
+    .imagemVideo {
+    position: relative;
+    max-height: 689px !important;
+    overflow: inherit !important;
+    }
+.video-overlay-play-button i {
+    background: #ff4614;
+    background: linear-gradient(to right, #ff4614 0%, #ff8214 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff4614", endColorstr="#ff8214",GradientType=1 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10em;
+    text-shadow: 0px 10px 40px #ff85194d;
+    position: relative;
+    top: 35%;
 }
 
 .play {
@@ -209,6 +252,12 @@ figure img {
     top: -10px;
     z-index: -1;
     margin: 0 auto;
+}
+
+.caixainterna {
+        position: relative;
+        margin-top: 75px;
+        height: 190px;
 }
 
 .caixainterna .textocaixa {

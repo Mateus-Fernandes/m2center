@@ -23,9 +23,6 @@ export default {
     },
     mounted() {
         this.imagem_blog = this.imagem_blogs;
-
-
-        
     }
 }
 </script>

@@ -52,7 +52,11 @@ $this->group(['middleware' => ['auth'], 'namespace'=>'Admin', 'prefix' => 'admin
     
     $this->get('contato', 'ContatoController@index')->name('admin.contato');
     $this->get('contato/lista', 'ContatoController@lista')->name('contato.lista');
-    $this->post('contato/atualizar', 'ContatoController@atualizar')->name('contato.atualizar');    
+    $this->post('contato/atualizar', 'ContatoController@atualizar')->name('contato.atualizar');
+    
+    $this->get('dashboard', 'DashboardController@index')->name('admin.dashboard');
+    $this->get('dashboard/lista', 'DashboardController@lista')->name('dashboard.lista');
+    $this->post('dashboard/atualizar', 'DashboardController@atualizar')->name('dashboard.atualizar');    
     
 });
 
@@ -64,7 +68,8 @@ $this->group(['namespace'=>'Admin', 'prefix' => 'api'], function(){
     $this->get('blog/lista', 'BlogController@lista')->name('blog.lista');
     $this->get('blog/lista/{id}', 'BlogController@listapost')->name('blog.listapost');
     $this->get('diferencial/lista', 'DiferencialController@lista')->name('diferencial.lista');;
-    $this->get('contato/lista', 'ContatoController@lista')->name('contato.lista'); 
+    $this->get('contato/lista', 'ContatoController@lista')->name('contato.lista');
+    $this->get('dashboard/lista', 'DashboardController@lista')->name('dashboard.lista');  
 });
 
 

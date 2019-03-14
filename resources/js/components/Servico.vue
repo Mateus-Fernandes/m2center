@@ -4,6 +4,39 @@
         <div class="col-lg-12">
             <div class="box">
                 <div class="box-header">
+                    <h3 class="box-title">Editar Informações da Página Serviços</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form @submit.prevent="editarpags">
+                            <div class="group">      
+                                <input type="text" required v-model="titulo_pag_servicos">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Titulo da Página</label>
+                            </div>
+                            <div class="group no-bottom">      
+                                <textarea-autosize
+                                placeholder="Type something here..."
+                                ref="someName"
+                                v-model="descricao_pag_servicos"
+                                :min-height="30"
+                                :max-height="350"
+                                ></textarea-autosize>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Descrição da Página</label>
+                            </div>
+                            <button type="submit" class="btn editarpag">Atualizar página</button>
+                            <FlashMessage></FlashMessage>
+                            </form>                           
+                        </div>
+                    </div>
+                </div>
+            </div>             
+            <div class="box">
+                <div class="box-header">
                     <h3 class="box-title">Listagem de Serviços Cadastrados</h3>
                 </div>
                 <div class="box-body">
@@ -113,6 +146,8 @@
                 imagem_serv: '',
                 icone_serv: '',
                 resumo_serv: '',
+                titulo_pag_servicos: '',
+                descricao_pag_servicos: '',
                 editarf: false,
                 adicionarif: false,
             }
@@ -120,6 +155,12 @@
         
         mounted: function mounted() {
             this.getVueItems();
+            axios
+            .get('http://18.228.42.180/admin/dashboard/lista')
+            .then(response => (
+                this.titulo_pag_servicos = response.data[0].titulo_pag_servicos,
+                this.descricao_pag_servicos = response.data[0].descricao_pag_servicos                                                
+                ))            
         },
         methods:{
             getVueItems: function getVueItems() {
@@ -128,6 +169,24 @@
                     _this.servico = response.data;
                 });
             },
+            editarpags(e) {
+                e.preventDefault();
+                let currentObj = this;
+                axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+                    titulo_pag_servicos: this.titulo_pag_servicos,
+                    descricao_pag_servicos: this.descricao_pag_servicos
+                })
+                .then(function (response) {
+                    currentObj.output = response.data;
+                    currentObj.flashMessage.show({status: 'success', title: 'Página atualizada com sucesso', message: 'a página Blog foi atualizada.'})
+                })
+                .catch(function (err) {
+                    console.error("Error response:");
+                    console.error(err.response);
+                    console.error(err.response);
+                    console.error(err.response);
+                });
+            },             
             adicionar(){
                 this.titulo_serv = '';
                 this.descricao_serv = '',

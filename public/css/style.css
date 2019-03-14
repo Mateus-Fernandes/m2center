@@ -477,8 +477,8 @@ nav.stroke ul li a:hover:after {
 
 .banner {
   background: #f50;
-  mask-image: url(http://m2.local:8080/images/svgbanner.svg);
-  -webkit-mask-image: url(http://m2.local:8080/images/svgbanner.svg);
+  mask-image: url(http://18.228.42.180/images/svgbanner.svg);
+  -webkit-mask-image: url(http://18.228.42.180/images/svgbanner.svg);
   mask-mode: alpha;
   -webkit-mask-mode: alpha;
   mask-repeat: no-repeat;
@@ -579,7 +579,7 @@ nav.stroke ul li a:hover:after {
 
 .dentroBanner {
   padding-top: 160px;
-  padding-bottom: 268px;
+  padding-bottom: 373px;
 }
 
 .botaoPrincipal {
@@ -673,6 +673,65 @@ path#fillup {
   color: #FFF;
 }
 
+.calltoaction {
+  background-size: 100%;
+  background-image: transparent;
+  cursor: pointer;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 5px solid #d0d0d000;
+  -o-border-image: url(http://18.228.42.180/images/border02.svg) 47% round;
+     border-image: url(http://18.228.42.180/images/border02.svg) 47% round;
+  padding: 22px 34px;
+  background: transparent;
+  border-image-width: 100%;
+  border-image-outset: inherit;
+  position: relative;
+  z-index: 100;
+  transition: 0.3s all linear;
+}
+
+.calltoaction:before {
+  border-radius: inherit;
+  background-image: linear-gradient(to right, #ff4614 0%, #ff8214 100%);
+  content: "";
+  display: block;
+  height: 101%;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  border-radius: 34px;
+  transition: opacity 0.6s;
+}
+
+.calltoaction:hover:before {
+  opacity: 1;
+}
+
+.calltoaction:hover {
+  color: #FFF;
+}
+
+.fundopreto {
+  color: #FFF;
+}
+
+.fundopreto:hover {
+  color: #333;
+}
+
+div#contato .calltoaction {
+  float: right;
+}
+
 img.abs {
   position: absolute;
   top: -100px;
@@ -690,7 +749,7 @@ img.abs {
   margin-top: -109px;
   z-index: 2;
   position: relative;
-  background: url(http://m2.local:8080/images/assets/historia.jpg) no-repeat;
+  background: url(http://18.228.42.180/images/assets/historia.jpg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -700,8 +759,9 @@ img.abs {
   text-transform: uppercase;
   color: #FFF;
   font-size: 42px;
-  margin-bottom: 8px;
+  margin-bottom: 22px;
   font-weight: bold;
+  margin-top: 43px;
 }
 
 .historia p {
@@ -709,7 +769,7 @@ img.abs {
   font-size: 23px;
   color: #FFF;
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .historia:after {
@@ -864,7 +924,7 @@ img.abs {
 }
 
 .caixa {
-  background: url(http://m2.local:8080/images/assets/bg-caixa.png) no-repeat #fff;
+  background: url(http://18.228.42.180/images/assets/bg-caixa.png) no-repeat #fff;
   border-radius: 12px;
   padding-top: 9px;
   padding-bottom: 5px;
@@ -1134,26 +1194,71 @@ footer a {
   overflow: hidden;
 }
 
-.imagemVideo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  background: #000;
-  opacity: 0.5;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  border-radius: 12px;
-}
-
 .imagemVideo::before {
-  content: url(http://m2.local:8080/images/assets/marca.png);
+  content: url(http://18.228.42.180/images/assets/marca.png);
   position: absolute;
   top: 14px;
+  mix-blend-mode: luminosity;
   right: 28px;
   width: 156px;
   height: 116px;
   z-index: 3;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.video-wrapper > video {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.video-wrapper > video.has-media-controls-hidden::-webkit-media-controls {
+  display: none;
+}
+
+.video-overlay-play-button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px calc(50% - 50px);
+  position: absolute;
+  top: 0;
+  z-index: 4 !important;
+  margin-top: 0 !important;
+  left: 0;
+  display: block;
+  opacity: 0.95;
+  cursor: pointer;
+  background-image: linear-gradient(transparent, #000);
+  transition: opacity 150ms;
+}
+
+.video-overlay-play-button:hover {
+  opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+  display: none;
+}
+
+.imagemVideo {
+  position: relative;
+  max-height: 689px !important;
+  overflow: inherit !important;
+}
+
+.video-overlay-play-button i {
+  background: #ff4614;
+  background: linear-gradient(to right, #ff4614 0%, #ff8214 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff4614", endColorstr="#ff8214",GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10em;
+  text-shadow: 0px 10px 40px #ff85194d;
+  position: relative;
+  top: 35%;
 }
 
 .play {
@@ -1344,6 +1449,12 @@ figure img {
   margin: 0 auto;
 }
 
+.caixainterna {
+  position: relative;
+  margin-top: 75px;
+  height: 190px;
+}
+
 .caixainterna .textocaixa {
   padding-top: 48px;
   padding-bottom: 46px;
@@ -1358,8 +1469,16 @@ figure img {
 
 .caixainterna .logocaixa {
   float: right;
-  padding-top: 55px;
+  padding-top: 25px;
   padding-right: 69px;
+}
+
+video {
+  width: 900px;
+}
+
+.v--modal-box.v--modal {
+  top: 222px !important;
 }
 
 .caixainterna .caixa {
@@ -1503,7 +1622,7 @@ figure img {
   content: "";
   position: absolute;
   top: 26%;
-  background-image: url(http://m2.local:8080/images/assets/blog/blogicon.png);
+  background-image: url(http://18.228.42.180/images/assets/blog/blogicon.png);
   background-repeat: no-repeat;
   height: 105px;
   width: 106px;
@@ -1589,7 +1708,7 @@ figure img {
   content: "";
   position: absolute;
   top: 26%;
-  background-image: url(http://m2.local:8080/images/assets/blog/blogicon.png);
+  background-image: url(http://18.228.42.180/images/assets/blog/blogicon.png);
   background-repeat: no-repeat;
   height: 105px;
   width: 106px;
@@ -1663,7 +1782,7 @@ section.conteudoBlog {
 .minhadiv {
   width: 200px;
   height: 70px;
-  background-image: url("http://m2.local:8080/images/border.svg");
+  background-image: url("http://18.228.42.180/images/border.svg");
   background-size: cover;
 }
 
@@ -1729,6 +1848,135 @@ section.conteudoBlog {
 }
 
 /* Ipad */
+
+@media screen and (max-width: 1028px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .centralizar {
+    padding: 0 2rem;
+  }
+
+  .logo {
+    grid-column: span 3;
+  }
+
+  .menu {
+    grid-column: span 9;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-right: 11px;
+  }
+
+  .contato > span {
+    background: #fff;
+    display: block;
+    padding: 8px 13px;
+    border-radius: 30px;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .cadaDiferencial {
+    grid-column: span 6;
+  }
+
+  .cadaDiferencial .bola {
+    width: 176px;
+    height: 176px;
+  }
+
+  .bolaServico {
+    grid-column: span 4;
+  }
+
+  .descricaoServico {
+    grid-column: span 8;
+    padding-left: 24px;
+  }
+
+  .bolaServico {
+    grid-column: span 4;
+    width: 177px;
+    height: 190px;
+  }
+
+  .cadaBlog h3 {
+    font-size: 17px;
+  }
+
+  .logocaixa img {
+    width: 22%;
+    padding-top: 21px;
+  }
+
+  .textocaixa h2 {
+    font-size: 24px;
+  }
+
+  .textocaixa h3 {
+    font-size: 24px;
+  }
+
+  .formulario input {
+    padding: 19px 26px;
+  }
+
+  .bolaMissao {
+    height: 157px;
+  }
+
+  .imagemMembro {
+    max-height: 327px;
+  }
+
+  .textoMembro svg {
+    top: 0;
+    left: -1px;
+    height: 97%;
+  }
+
+  .caixainterna .logocaixa {
+    float: none;
+    padding-top: 50px;
+    margin: 0 auto;
+    padding-bottom: 44px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .menufooter ul li:last-child {
+    padding-right: 0;
+    display: none;
+  }
+
+  .menufooter ul li a {
+    padding: 9px 4px;
+  }
+
+  .iconesfooter {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .textoBlog {
+    grid-column: span 10;
+    padding-left: 63px;
+  }
+
+  .bolaBlog {
+    grid-column: span 4;
+  }
+
+  .textoBlog h3 {
+    font-size: 26px;
+  }
+}
 
 /* Celular */
 

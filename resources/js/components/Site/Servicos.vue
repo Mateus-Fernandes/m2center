@@ -36,7 +36,7 @@
 
 
     <section class="box caixainterna">
-        <div class="container boxpadding">
+        <!-- <div class="container boxpadding">
             <div class="dozecenter caixa">
                 <div class="textocaixa">
                     <h4>Conheça mais nossa história</h4>
@@ -45,7 +45,7 @@
                     <router-link :to="{ name: 'quemsomos' }"><a href="#" class="calltoaction">Call to action</a></router-link>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <svg xmlns="http://www.w3.org/2000/svg" class="boxrodape" width="100%" height="441.47" viewBox="0 0 1920 594.12" xml:space="preserve" preserveAspectRatio="none">
             <path id="boxrodape" data-name="Forma 1" class="cls-1" width="1920" height="441.47" d="M-15,4643s294-56.5,948,312c0,0,541.5,243.5,1014-66v345H0Z" transform="translate(-2 -4639.88)"/>

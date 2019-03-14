@@ -7,7 +7,8 @@
 
 
 
-window.onload=function(){ 
+window.onload=function(){
+ 
   AOS.init();
   document.addEventListener('aos:in:super-duper', () => {
     //console.log(this.className);

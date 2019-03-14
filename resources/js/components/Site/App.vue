@@ -97,17 +97,17 @@
                            </svg>
                     </div>
                     
-                    <a href="#" class="calltoaction fundopreto" data-aos="fade-in">Call to Action</a>
+                    <a href="#" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</a>
                 </form>
             </div>
             <div class="dozecenter">
-                <div class="iconesfooter" data-aos="fade-left">
+                <div class="iconesfooter">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="menufooter" data-aos="fade-right">
+                <div class="menufooter">
                     <ul>
                         <li><router-link :to="{ name: 'home' }">Home</router-link></li>
                         <li><router-link :to="{ name: 'quemsomos' }">Quem Somos</router-link></li>

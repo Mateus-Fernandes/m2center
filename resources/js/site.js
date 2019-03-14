@@ -102,6 +102,7 @@ router.beforeResolve((to, from, next) => {
         NProgress.start()
     }
     document.title = to.meta.title;
+           
     next()
 });
 router.afterEach(() => {

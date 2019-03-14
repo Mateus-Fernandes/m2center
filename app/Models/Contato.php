@@ -17,6 +17,7 @@ class Contato extends Model
         'cep',
         'email',
         'funcionamento_semana',
-        'funcionamento_hora'
+        'funcionamento_hora',
+        'texto_rodape_inicial'
     ];
 }
