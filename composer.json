@@ -15,7 +15,7 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.4.0",
         "sopamo/laravel-filepond": "^0.1.0",
-        "unisharp/laravel-filemanager": "dev-master"
+        "unisharp/laravel-filemanager": "v2.0.0-alpha7"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

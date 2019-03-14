@@ -67,6 +67,12 @@ $this->group(['namespace'=>'Admin', 'prefix' => 'api'], function(){
     $this->get('contato/lista', 'ContatoController@lista')->name('contato.lista'); 
 });
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
+    // list all lfm routes here...
+});
+
 $this->get('/', 'Site\SiteController@index');
 $this->get('/quemsomos', 'Site\SiteController@index');
 $this->get('/blog', 'Site\SiteController@index');

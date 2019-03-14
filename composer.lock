@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b472c4338f28c5eca76ed2b7d5d81f1",
+    "content-hash": "af63e1c1bcc64e693edf191666519a03",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3302,16 +3302,16 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
-            "version": "dev-master",
+            "version": "v2.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
-                "reference": "64ac677461e14bc9883faa8d9bb3bbd72f707257"
+                "reference": "f25ea4d4f4e782fc20e690d121daacf1539ae032"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/64ac677461e14bc9883faa8d9bb3bbd72f707257",
-                "reference": "64ac677461e14bc9883faa8d9bb3bbd72f707257",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/f25ea4d4f4e782fc20e690d121daacf1539ae032",
+                "reference": "f25ea4d4f4e782fc20e690d121daacf1539ae032",
                 "shasum": ""
             },
             "require": {
@@ -3373,7 +3373,7 @@
                 "tinymce",
                 "upload"
             ],
-            "time": "2019-01-17T09:39:49+00:00"
+            "time": "2018-12-05T14:33:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5256,9 +5256,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "unisharp/laravel-filemanager": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
