@@ -380,7 +380,15 @@ transition: opacity 0.6s;
 .calltoaction:hover {
     color: #FFF;
 }
-
+.fundopreto {
+    color: #FFF;
+}
+.fundopreto:hover {
+    color: #333;
+}
+div#contato .calltoaction {
+    float: right;
+}
 // Nossa História
 img.abs {
     position: absolute;

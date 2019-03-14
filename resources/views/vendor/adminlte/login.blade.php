@@ -11,7 +11,7 @@
 @section('body')
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}">{!! config('adminlte.logo', '<b>Admin</b>LTE') !!}</a>
+            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}"><img src="http://18.228.42.180/images/assets/logo-footer.png" alt=""></a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
@@ -40,13 +40,6 @@
                     @endif
                 </div>
                 <div class="row">
-                    <div class="col-xs-8">
-                        <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox" name="remember"> Lembrar-me
-                            </label>
-                        </div>
-                    </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
                         <button type="submit"

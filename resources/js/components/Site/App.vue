@@ -97,7 +97,7 @@
                            </svg>
                     </div>
                     
-                    <a href="#" class="calltoaction" data-aos="fade-in">Call to Action</a>
+                    <a href="#" class="calltoaction fundopreto" data-aos="fade-in">Call to Action</a>
                 </form>
             </div>
             <div class="dozecenter">

@@ -9,7 +9,7 @@
             <div class="dozecenter conteudoHistoria">
                 <h2 data-aos="zoom-in">Nossa História</h2>
                 <p data-aos="zoom-out">Há quatro anos no mercado de vendas de alta performance, somos uma empresa de aquisição de clientes baseada em performance que usa tecnologia e dados para proporcionar experiências de <br> compra mais inteligentes e otimizadas.</p>
-                <router-link :to="{ name: 'quemsomos' }"><a href="#" class="calltoaction" data-aos="fade-in">Call to Action</a></router-link>
+                <router-link :to="{ name: 'quemsomos' }"><a href="#" class="calltoaction fundopreto" data-aos="fade-in">Call to Action</a></router-link>
             </div>
         </div>
     </section>
@@ -104,8 +104,8 @@ export default {
                 servico:[],
                 blog:[],
                 data: [
-                '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1><a href="#" class="botaoNovo"><span>Call to Action</span><img src="http://18.228.42.180/images/border.svg" alt="" class="injetar"></a></div></div></div>',
-                '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1><a href="#" class="botaoNovo"><span>Call to Action</span><img src="http://18.228.42.180/images/border.svg" alt="" class="injetar"></a></div></div></div>',
+                '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1><a href="#" class="calltoaction" data-aos="fade-in">Call to Action</div></div></div>',
+                '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1><<a href="#" class="calltoaction" data-aos="fade-in">Call to Action</a></div></div></div>',
                 ],                                                                                  
             };
         },       
