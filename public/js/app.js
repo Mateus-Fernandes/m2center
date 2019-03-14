@@ -2846,9 +2846,6 @@ __webpack_require__.r(__webpack_exports__);
         console.error(err.response.headers);
       });
     }
-  },
-  watch: {
-    n: n
   }
 });
 
