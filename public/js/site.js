@@ -2758,7 +2758,7 @@ __webpack_require__.r(__webpack_exports__);
     enviar: function enviar(e) {
       e.preventDefault();
       var currentObj = this;
-      axios.post('http://18.228.42.180/envia', {
+      axios.post('http://m2.local:8080/envia', {
         nome_envia: this.nome_envia,
         telefone_envia: this.telefone_envia,
         email_envia: this.email_envia
@@ -2854,7 +2854,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      blog: []
+      blog: [],
+      descricao_pag_blog: '',
+      titulo_pag_blog: ''
     };
   },
   mounted: function mounted() {
@@ -3378,7 +3380,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      servico: []
+      servico: [],
+      titulo_pag_servicos: '',
+      descricao_pag_servicos: ''
     };
   },
   mounted: function mounted() {

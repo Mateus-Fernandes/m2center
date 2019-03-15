@@ -56,7 +56,9 @@
 export default {
         data() {
             return {
-                blog:[],                                                                
+                blog:[],
+                descricao_pag_blog: '',
+                titulo_pag_blog: ''                                                             
             };
         },
         mounted() {

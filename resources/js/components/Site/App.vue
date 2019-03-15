@@ -160,7 +160,7 @@ export default {
                 e.preventDefault();
                 let currentObj = this;
 
-                axios.post('http://18.228.42.180/envia', {
+                axios.post('http://m2.local:8080/envia', {
                     nome_envia: this.nome_envia,
                     telefone_envia: this.telefone_envia,
                     email_envia: this.email_envia,

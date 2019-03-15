@@ -58,7 +58,9 @@
 export default {
         data() {
             return {
-                servico:[],                                                                
+                servico:[],
+                titulo_pag_servicos: '',
+                descricao_pag_servicos: '',                                                                
             };
         },
         mounted() {
