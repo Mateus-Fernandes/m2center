@@ -3083,7 +3083,7 @@ __webpack_require__.r(__webpack_exports__);
       blog: [],
       texto_diferencial_i: '',
       historia_inicial: '',
-      data: ['<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>', '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>']
+      data: ['', '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>']
     };
   },
   mounted: function mounted() {
@@ -40992,12 +40992,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "div",
-      { staticClass: "banner" },
-      [_c("carousel", { attrs: { data: _vm.data, slideOnSwipe: false } })],
-      1
-    ),
+    _vm._m(0),
     _vm._v(" "),
     _c("section", { staticClass: "historia" }, [
       _c("div", { staticClass: "container" }, [
@@ -41114,7 +41109,7 @@ var render = function() {
         "div",
         { staticClass: "container" },
         [
-          _vm._m(0),
+          _vm._m(1),
           _vm._v(" "),
           _vm._l(_vm.servico, function(s) {
             return _c(
@@ -41151,7 +41146,7 @@ var render = function() {
         "div",
         { staticClass: "container espacamentoblog" },
         [
-          _vm._m(1),
+          _vm._m(2),
           _vm._v(" "),
           _vm._l(_vm.blog, function(b) {
             return _c(
@@ -41190,7 +41185,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("section", { staticClass: "box" }, [
-      _vm._m(2),
+      _vm._m(3),
       _vm._v(" "),
       _c(
         "svg",
@@ -41223,6 +41218,31 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "banner" }, [
+      _c("div", { staticClass: "example-slide" }, [
+        _c("img", {
+          staticClass: "abs",
+          attrs: { src: "http://18.228.42.180/images/banner01.jpg", alt: "" }
+        }),
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "dozecenter dentroBanner" }, [
+            _c("h1", [
+              _c("span", [_vm._v("Inovação")]),
+              _vm._v(" e "),
+              _c("span", [_vm._v("Inteligência")]),
+              _vm._v(" de mercado "),
+              _c("br"),
+              _vm._v(" para alavancar suas vendas")
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

@@ -1,7 +1,7 @@
 <template>
 <div>
         <div class="banner">
-            <carousel :data="data" :slideOnSwipe="false"></carousel>
+            <div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>
         </div>
 
     <section class="historia">
@@ -106,7 +106,7 @@ export default {
                 texto_diferencial_i: '',
                 historia_inicial: '',
                 data: [
-                '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>',
+                '',
                 '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>',
                 ],                                                                                  
             };
