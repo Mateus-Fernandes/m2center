@@ -1,7 +1,7 @@
 <template>
 <div class="equipe">
     <div class="row">
-        <div class="col-lg-12" style="display:none;">
+        <div class="col-lg-12">
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Editar Informações da Página Serviços</h3>
