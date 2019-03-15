@@ -1,6 +1,6 @@
 <template>
 <div>
-    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/nossos-servicos.jpg);">
+    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/blog.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2>{{titulo_pag_blog}}</h2>

@@ -52416,70 +52416,46 @@ var render = function() {
     { staticClass: "equipe" },
     [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-12" }, [
-          _c("div", { staticClass: "box" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "box-body" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-12" }, [
-                  _c(
-                    "form",
-                    {
-                      on: {
-                        submit: function($event) {
-                          $event.preventDefault()
-                          return _vm.editarpags($event)
-                        }
-                      }
-                    },
-                    [
-                      _c("div", { staticClass: "group" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.titulo_pag_servicos,
-                              expression: "titulo_pag_servicos"
-                            }
-                          ],
-                          attrs: { type: "text", required: "" },
-                          domProps: { value: _vm.titulo_pag_servicos },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.titulo_pag_servicos = $event.target.value
-                            }
+        _c(
+          "div",
+          { staticClass: "col-lg-12", staticStyle: { display: "none" } },
+          [
+            _c("div", { staticClass: "box" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "box-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-12" }, [
+                    _c(
+                      "form",
+                      {
+                        on: {
+                          submit: function($event) {
+                            $event.preventDefault()
+                            return _vm.editarpags($event)
                           }
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "highlight" }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "bar" }),
-                        _vm._v(" "),
-                        _c("label", [_vm._v("Titulo da Página")])
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "group no-bottom" },
-                        [
-                          _c("textarea-autosize", {
-                            ref: "someName",
-                            attrs: {
-                              placeholder: "Type something here...",
-                              "min-height": 30,
-                              "max-height": 350
-                            },
-                            model: {
-                              value: _vm.descricao_pag_servicos,
-                              callback: function($$v) {
-                                _vm.descricao_pag_servicos = $$v
-                              },
-                              expression: "descricao_pag_servicos"
+                        }
+                      },
+                      [
+                        _c("div", { staticClass: "group" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.titulo_pag_servicos,
+                                expression: "titulo_pag_servicos"
+                              }
+                            ],
+                            attrs: { type: "text", required: "" },
+                            domProps: { value: _vm.titulo_pag_servicos },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.titulo_pag_servicos = $event.target.value
+                              }
                             }
                           }),
                           _vm._v(" "),
@@ -52487,115 +52463,143 @@ var render = function() {
                           _vm._v(" "),
                           _c("span", { staticClass: "bar" }),
                           _vm._v(" "),
-                          _c("label", [_vm._v("Descrição da Página")])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn editarpag",
-                          attrs: { type: "submit" }
-                        },
-                        [_vm._v("Atualizar página")]
-                      ),
-                      _vm._v(" "),
-                      _c("FlashMessage")
-                    ],
-                    1
-                  )
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "box" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "box-body" }, [
-              _c("table", { staticClass: "table" }, [
-                _vm._m(2),
-                _vm._v(" "),
-                _c(
-                  "tbody",
-                  _vm._l(_vm.servico, function(u) {
-                    return _c("tr", [
-                      _c("th", [
-                        _c("img", {
-                          attrs: { width: "200px", src: u.imagem_serv }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(u.titulo_serv))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(u.descricao_serv))]),
-                      _vm._v(" "),
-                      _c("td", [
+                          _c("label", [_vm._v("Titulo da Página")])
+                        ]),
+                        _vm._v(" "),
                         _c(
-                          "button",
-                          { staticClass: "btn btn-outline-primary" },
+                          "div",
+                          { staticClass: "group no-bottom" },
                           [
-                            _c(
-                              "a",
-                              {
-                                attrs: { href: "#" },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.editar(u.id)
-                                  }
-                                }
+                            _c("textarea-autosize", {
+                              ref: "someName",
+                              attrs: {
+                                placeholder: "Type something here...",
+                                "min-height": 30,
+                                "max-height": 350
                               },
-                              [_vm._v("Editar")]
-                            )
-                          ]
+                              model: {
+                                value: _vm.descricao_pag_servicos,
+                                callback: function($$v) {
+                                  _vm.descricao_pag_servicos = $$v
+                                },
+                                expression: "descricao_pag_servicos"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "highlight" }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "bar" }),
+                            _vm._v(" "),
+                            _c("label", [_vm._v("Descrição da Página")])
+                          ],
+                          1
                         ),
                         _vm._v(" "),
                         _c(
                           "button",
-                          { staticClass: "btn btn-outline-danger" },
-                          [
-                            _c(
-                              "a",
-                              {
-                                attrs: { href: "#" },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.excluir(u.id)
-                                  }
-                                }
-                              },
-                              [_vm._v("Excluir")]
-                            )
-                          ]
-                        )
-                      ])
-                    ])
-                  }),
-                  0
-                )
+                          {
+                            staticClass: "btn editarpag",
+                            attrs: { type: "submit" }
+                          },
+                          [_vm._v("Atualizar página")]
+                        ),
+                        _vm._v(" "),
+                        _c("FlashMessage")
+                      ],
+                      1
+                    )
+                  ])
+                ])
               ])
             ]),
             _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success adicionarbtn",
-                on: {
-                  click: function($event) {
-                    return _vm.adicionar()
+            _c("div", { staticClass: "box" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "box-body" }, [
+                _c("table", { staticClass: "table" }, [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.servico, function(u) {
+                      return _c("tr", [
+                        _c("th", [
+                          _c("img", {
+                            attrs: { width: "200px", src: u.imagem_serv }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(u.titulo_serv))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(u.descricao_serv))]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "button",
+                            { staticClass: "btn btn-outline-primary" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.editar(u.id)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Editar")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            { staticClass: "btn btn-outline-danger" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.excluir(u.id)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Excluir")]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    }),
+                    0
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success adicionarbtn",
+                  on: {
+                    click: function($event) {
+                      return _vm.adicionar()
+                    }
                   }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "fa fa-plus",
-                  attrs: { "aria-hidden": "true" }
-                })
-              ]
-            )
-          ])
-        ])
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-plus",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ])
+          ]
+        )
       ]),
       _vm._v(" "),
       _c(

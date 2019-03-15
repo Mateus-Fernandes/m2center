@@ -79,6 +79,7 @@ $this->get('/quemsomos', 'Site\SiteController@index');
 $this->get('/blog', 'Site\SiteController@index');
 $this->get('/servicos', 'Site\SiteController@index');
 $this->get('/contato', 'Site\SiteController@index');
+$this->post('/envia', 'Site\SiteController@envia');
 $this->get('/blog/{id}', 'Site\SiteController@index');
 
 Auth::routes();

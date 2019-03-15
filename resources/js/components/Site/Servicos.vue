@@ -1,10 +1,10 @@
 <template>
 <div>
-    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/nossos-servicos.jpg);">
+    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/nossos-servicos-v2.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
-                <h2>{{titulo_pag_servicos}}</h2>
-                <p>{{descricao_pag_servicos}}</p>
+                <h2 style="opacity:0;">{{titulo_pag_servicos}}</h2>
+                <p style="opacity:0;">{{descricao_pag_servicos}}</p>
             </div>
         </div>
     </section>

@@ -14,6 +14,8 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import VModal from 'vue-js-modal';
 Vue.use(VModal);
+import FlashMessage from '@smartweb/vue-flash-message';
+Vue.use(FlashMessage);
 var VueScrollTo = require('vue-scrollto');
 
 

@@ -47,9 +47,9 @@
                 <p><b>{{funcionamento_semana}}:</b> {{funcionamento_hora}}</p>
             </div>
             <div class="formulario" data-aos="fade-up">
-                <form action="#">
+                <form @submit.prevent="enviar">
                     <div class="cadaInput">
-                            <input type="text" id="nome" placeholder="Nome completo">
+                            <input type="text" name="nome_envia" id="nome" placeholder="Nome completo" v-model="nome_envia" required>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -65,7 +65,7 @@
                            </svg>
                     </div>
                     <div class="cadaInput">
-                            <input type="text" id="email" placeholder="E-mail">
+                            <input type="email" name="email" id="email" placeholder="E-mail" v-model="email_envia" required>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -81,7 +81,7 @@
                            </svg>
                     </div>
                     <div class="cadaInput">
-                            <input type="text" id="telefone" placeholder="Telefone">
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone" v-model="telefone_envia" required>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -95,17 +95,16 @@
                            <path fill-rule="evenodd" id="form3" stroke="rgb(62, 62, 62)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                             d="M11.000,2.000 L557.000,2.000 C561.970,2.000 566.000,6.029 566.000,11.000 L566.000,77.000 C566.000,81.970 561.970,86.000 557.000,86.000 L11.000,86.000 C6.029,86.000 2.000,81.970 2.000,77.000 L2.000,11.000 C2.000,6.029 6.029,2.000 11.000,2.000 Z"/>
                            </svg>
+                           <FlashMessage></FlashMessage>
                     </div>
                     
-                    <a href="#" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</a>
+                    <button type="submit" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
                 </form>
             </div>
             <div class="dozecenter">
                 <div class="iconesfooter">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/m2centerRP/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/m2-center/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <div class="menufooter">
                     <ul>
@@ -132,9 +131,13 @@ export default {
                 cidade: '',
                 bairro: '',
                 cep: '',
+                nome_envia:'',
+                telefone_envia:'',
+                email_envia:'',
                 email: '',
                 funcionamento_semana: '',
-                funcionamento_hora: '',                                                                   
+                funcionamento_hora: '',
+                output: '',                                                                   
             };
         },
         mounted() {
@@ -153,6 +156,32 @@ export default {
                       
         },
         methods: {
+            enviar(e) {
+                e.preventDefault();
+                let currentObj = this;
+
+                axios.post('http://18.228.42.180/envia', {
+                    nome_envia: this.nome_envia,
+                    telefone_envia: this.telefone_envia,
+                    email_envia: this.email_envia,
+                })
+                .then(function (response) {
+                    currentObj.flashMessage.show({status: 'success', title: 'Mensagem Enviada com sucesso!', message: 'Aguarde o contato da nossa equipe.'})
+                })
+                .catch(function (error) {
+                    if (error.response) {
+                    // The request was made, but the server responded with a status code
+                    // that falls out of the range of 2xx
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                    } else {
+                    // Something happened in setting up the request that triggered an Error
+                    console.log('Error', error.message);
+                    }
+                    console.log(error.config);
+                });
+            }            
         }
 }
 </script>
