@@ -34,9 +34,7 @@
         </div>
     </header>
     <transition name="fade" mode="out-in">
-
             <router-view></router-view>
-
     </transition>
     <footer>
         <div class="container" id="contato">
@@ -95,8 +93,25 @@
                            <path fill-rule="evenodd" id="form3" stroke="rgb(62, 62, 62)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                             d="M11.000,2.000 L557.000,2.000 C561.970,2.000 566.000,6.029 566.000,11.000 L566.000,77.000 C566.000,81.970 561.970,86.000 557.000,86.000 L11.000,86.000 C6.029,86.000 2.000,81.970 2.000,77.000 L2.000,11.000 C2.000,6.029 6.029,2.000 11.000,2.000 Z"/>
                            </svg>
-                           <FlashMessage></FlashMessage>
+                           
                     </div>
+                    <div class="cadaInput">
+                            <input type="text" id="mensagem" name="mensagem" placeholder="Mensagem" v-model="mensagem_envia" maxlength="200" required>
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 570 90">
+                            <defs>
+                                    <linearGradient id="meugradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#ff4614" />
+                                            <stop offset="100%" stop-color="#ff8214" />
+                                          </linearGradient>
+                            </defs>
+                           <path fill-rule="evenodd" id="form4" stroke="rgb(62, 62, 62)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                            d="M11.000,2.000 L557.000,2.000 C561.970,2.000 566.000,6.029 566.000,11.000 L566.000,77.000 C566.000,81.970 561.970,86.000 557.000,86.000 L11.000,86.000 C6.029,86.000 2.000,81.970 2.000,77.000 L2.000,11.000 C2.000,6.029 6.029,2.000 11.000,2.000 Z"/>
+                           </svg>
+                           <FlashMessage></FlashMessage>
+                    </div>                    
                     
                     <button type="submit" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
                 </form>
@@ -141,6 +156,7 @@ export default {
             };
         },
         mounted() {
+                
                 axios
                 .get('http://18.228.42.180/api/contato/lista')
                 .then(response => (
@@ -156,14 +172,18 @@ export default {
                       
         },
         methods: {
+            afterEnter () {
+                this.$root.$emit('scrollAfterEnter');
+            },            
             enviar(e) {
                 e.preventDefault();
                 let currentObj = this;
 
-                axios.post('http://m2.local:8080/envia', {
+                axios.post('http://18.228.42.180/envia', {
                     nome_envia: this.nome_envia,
                     telefone_envia: this.telefone_envia,
                     email_envia: this.email_envia,
+                    mensagem_envia: this.mensagem_envia,
                 })
                 .then(function (response) {
                     currentObj.flashMessage.show({status: 'success', title: 'Mensagem Enviada com sucesso!', message: 'Aguarde o contato da nossa equipe.'})
@@ -182,6 +202,7 @@ export default {
                     console.log(error.config);
                 });
             }            
-        }
+        },
+
 }
 </script>

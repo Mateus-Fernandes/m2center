@@ -901,7 +901,7 @@ img.abs {
 .cadaBlog img {
   border-radius: 5px;
   width: 100%;
-  max-height: 211px;
+  min-height: 211px;
 }
 
 .leiamais {
@@ -916,6 +916,7 @@ img.abs {
   text-transform: uppercase;
   margin-top: 14px;
   margin-bottom: 9px;
+  min-height: 58px;
 }
 
 .box {
@@ -1617,16 +1618,9 @@ video {
   position: relative;
 }
 
-.bolaBlog:after {
-  content: "";
-  position: absolute;
-  top: 26%;
-  background-image: url(http://18.228.42.180/images/assets/blog/blogicon.png);
-  background-repeat: no-repeat;
-  height: 105px;
-  width: 106px;
-  left: 26%;
-  z-index: 3;
+.bolaBlog img {
+  width: 311px;
+  height: 225px;
 }
 
 .bolaBlog:before {
@@ -1703,18 +1697,6 @@ video {
   position: relative;
 }
 
-.bolaSidebar:after {
-  content: "";
-  position: absolute;
-  top: 26%;
-  background-image: url(http://18.228.42.180/images/assets/blog/blogicon.png);
-  background-repeat: no-repeat;
-  height: 105px;
-  width: 106px;
-  left: 26%;
-  z-index: 3;
-}
-
 .bolaSidebar:before {
   content: "";
   position: absolute;
@@ -1747,6 +1729,15 @@ video {
   max-height: 120px;
   -webkit-line-clamp: 5;
   /* number of lines to show */
+}
+
+.cadaServico a {
+  text-decoration: none;
+}
+
+.bolaSidebar img {
+  width: 287px;
+  height: 237px;
 }
 
 .textodaPublicacao p {

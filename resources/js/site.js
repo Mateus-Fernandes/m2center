@@ -64,8 +64,11 @@ Vue.use(VueCarousel);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+
 const router = new VueRouter({
     mode: 'history',
+        
     routes: [
         {
             path: '/',
@@ -83,7 +86,7 @@ const router = new VueRouter({
             path: '/servicos',
             name: 'servicos',
             component: servicos,
-            meta: {title:'M2 Center - Serviços'}
+            meta: {title:'M2 Center - Serviços', scrollToTop: true}
         },
         {
             path: '/blog',
@@ -108,8 +111,11 @@ router.beforeResolve((to, from, next) => {
     next()
 });
 router.afterEach(() => {
-    NProgress.done()
+    NProgress.done();
+    window.scrollTo(0, 0);
 });
+
+
 
 
 const app = new Vue({

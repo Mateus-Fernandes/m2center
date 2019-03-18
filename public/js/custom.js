@@ -575,6 +575,10 @@ __webpack_require__.r(__webpack_exports__);
 var mySVGsToInject = document.querySelectorAll('.injetar');
 svg_injector__WEBPACK_IMPORTED_MODULE_0___default()(mySVGsToInject);
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 window.onload = function () {
   AOS.init();
   document.addEventListener('aos:in:super-duper', function () {//console.log(this.className);
@@ -641,6 +645,17 @@ window.onload = function () {
     if (current) current.pause();
     current = anime({
       targets: '#form3',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 1500,
+      direction: 'alternate',
+      loop: false
+    });
+  });
+  mensagem.addEventListener('focus', function (e) {
+    if (current) current.pause();
+    current = anime({
+      targets: '#form4',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
       duration: 1500,

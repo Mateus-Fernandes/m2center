@@ -2730,6 +2730,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2755,13 +2770,17 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
+    afterEnter: function afterEnter() {
+      this.$root.$emit('scrollAfterEnter');
+    },
     enviar: function enviar(e) {
       e.preventDefault();
       var currentObj = this;
-      axios.post('http://m2.local:8080/envia', {
+      axios.post('http://18.228.42.180/envia', {
         nome_envia: this.nome_envia,
         telefone_envia: this.telefone_envia,
-        email_envia: this.email_envia
+        email_envia: this.email_envia,
+        mensagem_envia: this.mensagem_envia
       }).then(function (response) {
         currentObj.flashMessage.show({
           status: 'success',
@@ -2979,6 +2998,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var svg_injector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svg-injector */ "./node_modules/svg-injector/svg-injector.js");
 /* harmony import */ var svg_injector__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(svg_injector__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
 //
 //
 //
@@ -40458,6 +40480,96 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
+                  _c("div", { staticClass: "cadaInput" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.telefone_envia,
+                          expression: "telefone_envia"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        id: "telefone",
+                        name: "telefone",
+                        placeholder: "Telefone",
+                        required: ""
+                      },
+                      domProps: { value: _vm.telefone_envia },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.telefone_envia = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "svg",
+                      {
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                          viewBox: "0 0 570 90"
+                        }
+                      },
+                      [
+                        _c(
+                          "defs",
+                          [
+                            _c(
+                              "linearGradient",
+                              {
+                                attrs: {
+                                  id: "meugradiente",
+                                  x1: "0%",
+                                  y1: "0%",
+                                  x2: "100%",
+                                  y2: "0%"
+                                }
+                              },
+                              [
+                                _c("stop", {
+                                  attrs: {
+                                    offset: "0%",
+                                    "stop-color": "#ff4614"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("stop", {
+                                  attrs: {
+                                    offset: "100%",
+                                    "stop-color": "#ff8214"
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: {
+                            "fill-rule": "evenodd",
+                            id: "form3",
+                            stroke: "rgb(62, 62, 62)",
+                            "stroke-width": "4px",
+                            "stroke-linecap": "butt",
+                            "stroke-linejoin": "miter",
+                            fill: "none",
+                            d:
+                              "M11.000,2.000 L557.000,2.000 C561.970,2.000 566.000,6.029 566.000,11.000 L566.000,77.000 C566.000,81.970 561.970,86.000 557.000,86.000 L11.000,86.000 C6.029,86.000 2.000,81.970 2.000,77.000 L2.000,11.000 C2.000,6.029 6.029,2.000 11.000,2.000 Z"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
                     "div",
                     { staticClass: "cadaInput" },
@@ -40467,24 +40579,25 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.telefone_envia,
-                            expression: "telefone_envia"
+                            value: _vm.mensagem_envia,
+                            expression: "mensagem_envia"
                           }
                         ],
                         attrs: {
                           type: "text",
-                          id: "telefone",
-                          name: "telefone",
-                          placeholder: "Telefone",
+                          id: "mensagem",
+                          name: "mensagem",
+                          placeholder: "Mensagem",
+                          maxlength: "200",
                           required: ""
                         },
-                        domProps: { value: _vm.telefone_envia },
+                        domProps: { value: _vm.mensagem_envia },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.telefone_envia = $event.target.value
+                            _vm.mensagem_envia = $event.target.value
                           }
                         }
                       }),
@@ -40537,7 +40650,7 @@ var render = function() {
                           _c("path", {
                             attrs: {
                               "fill-rule": "evenodd",
-                              id: "form3",
+                              id: "form4",
                               stroke: "rgb(62, 62, 62)",
                               "stroke-width": "4px",
                               "stroke-linecap": "butt",
@@ -40913,7 +41026,7 @@ var render = function() {
                   },
                   [
                     _c("div", { staticClass: "bolaSidebar" }, [
-                      _c("img", { attrs: { src: u.imagem_blog, alt: "" } })
+                      _c("img", { attrs: { src: u.miniatura_blog, alt: "" } })
                     ])
                   ]
                 ),
@@ -41123,18 +41236,34 @@ var render = function() {
                 attrs: { "data-aos": "fade-left" }
               },
               [
-                _c("div", { staticClass: "bolaServico" }, [
-                  _c("object", {
-                    staticClass: "iconePrimeiro",
-                    attrs: { type: "image/svg+xml", data: s.icone_serv }
-                  })
-                ]),
+                _c(
+                  "div",
+                  { staticClass: "bolaServico" },
+                  [
+                    _c("router-link", { attrs: { to: { name: "servicos" } } }, [
+                      _c("object", {
+                        staticClass: "iconePrimeiro",
+                        attrs: { type: "image/svg+xml", data: s.icone_serv }
+                      })
+                    ])
+                  ],
+                  1
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "descricaoServico" }, [
-                  _c("h3", [_vm._v(_vm._s(s.titulo_serv))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(s.resumo_serv))])
-                ])
+                _c(
+                  "div",
+                  { staticClass: "descricaoServico" },
+                  [
+                    _c("router-link", { attrs: { to: "/servicos#contato" } }, [
+                      _c("h3", [_vm._v(_vm._s(s.titulo_serv))])
+                    ]),
+                    _vm._v(" "),
+                    _c("router-link", { attrs: { to: { name: "servicos" } } }, [
+                      _c("p", [_vm._v(_vm._s(s.resumo_serv))])
+                    ])
+                  ],
+                  1
+                )
               ]
             )
           }),
@@ -57695,7 +57824,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     name: 'servicos',
     component: _components_Site_Servicos_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
     meta: {
-      title: 'M2 Center - Serviços'
+      title: 'M2 Center - Serviços',
+      scrollToTop: true
     }
   }, {
     path: '/blog',
@@ -57722,6 +57852,7 @@ router.beforeResolve(function (to, from, next) {
 });
 router.afterEach(function () {
   nprogress__WEBPACK_IMPORTED_MODULE_1___default.a.done();
+  window.scrollTo(0, 0);
 });
 var app = new Vue(_defineProperty({
   el: '#app',

@@ -16,7 +16,7 @@
                 <div class="sidebar">
                     <div class="cadaSidebar" v-for="u in blog">
                         <a @click="visualizar(u.id)" style="cursor:pointer; color: #333;"><div class="bolaSidebar">
-                            <img :src="u.imagem_blog" alt="">
+                            <img :src="u.miniatura_blog" alt="">
                         </div></a>
                         <a @click="visualizar(u.id)" style="cursor:pointer; color: #333;"><h3>{{u.titulo_blog}}</h3></a>
                         <p v-html="u.texto_blog">{{u.texto_blog}}</p>

@@ -46,13 +46,16 @@
             </div>
             <div class="dozecenter cadaServico" data-aos="fade-left" v-for="s in servico">
                 <div class="bolaServico">
-                    <object type="image/svg+xml" :data="s.icone_serv" class="iconePrimeiro"></object>
+                    <router-link :to="{ name: 'servicos'}"><object type="image/svg+xml" :data="s.icone_serv" class="iconePrimeiro"></object></router-link>
                 </div>
+               
                 <div class="descricaoServico">
-                    <h3>{{s.titulo_serv}}</h3>
-                    <p>{{s.resumo_serv}}</p>
+                     <router-link to="/servicos#contato"><h3>{{s.titulo_serv}}</h3></router-link>
+                    <router-link :to="{ name: 'servicos'}"><p>{{s.resumo_serv}}</p></router-link>
                 </div>
+                
             </div>
+            
             <div class="dozecenter botaomargin">
                      <!-- <router-link :to="{ name: 'servicos' }"><a href="#" class="calltoaction" data-aos="fade-in">Call to Action </a></router-link> -->
             </div>
