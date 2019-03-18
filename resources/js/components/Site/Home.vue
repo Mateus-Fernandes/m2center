@@ -44,7 +44,7 @@
             <div class="dozecenter titulo">
                 <h2 class="preenchendo" data-aos="fade-in" data-aos-id="super-duper">Serviços</h2>
             </div>
-            <div class="dozecenter" data-aos="fade-left" v-for="s in servico">
+            <div class="dozecenter cadaServico" data-aos="fade-left" v-for="s in servico">
                 <div class="bolaServico">
                     <router-link :to="{ name: 'servicos'}"><object type="image/svg+xml" :data="s.icone_serv" class="iconePrimeiro"></object></router-link>
                 </div>

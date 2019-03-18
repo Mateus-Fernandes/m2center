@@ -11,7 +11,7 @@
 
     <section class="listagemServicos">
         <div class="centralizar">
-            <div class="18.228.42.180s" v-for="u in servico" data-aos="flip-up">
+            <div class="cadaServicos" v-for="u in servico" data-aos="flip-up">
                 <div class="imagemServicos">
                     <img :src="u.imagem_serv" alt="">
                     <h2>{{u.titulo_serv}}</h2>

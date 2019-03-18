@@ -41384,7 +41384,10 @@ var render = function() {
           _vm._l(_vm.servico, function(s) {
             return _c(
               "div",
-              { staticClass: "dozecenter", attrs: { "data-aos": "fade-left" } },
+              {
+                staticClass: "dozecenter cadaServico",
+                attrs: { "data-aos": "fade-left" }
+              },
               [
                 _c(
                   "div",
@@ -42046,7 +42049,7 @@ var render = function() {
         _vm._l(_vm.servico, function(u) {
           return _c(
             "div",
-            { staticClass: "18.228.42.180s", attrs: { "data-aos": "flip-up" } },
+            { staticClass: "cadaServicos", attrs: { "data-aos": "flip-up" } },
             [
               _c("div", { staticClass: "imagemServicos" }, [
                 _c("img", { attrs: { src: u.imagem_serv, alt: "" } }),
@@ -57947,7 +57950,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Site_Bloginterno_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Site/Bloginterno.vue */ "./resources/js/components/Site/Bloginterno.vue");
 /* harmony import */ var _chenfengyuan_vue_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @chenfengyuan/vue-carousel */ "./node_modules/@chenfengyuan/vue-carousel/dist/vue-carousel.js");
 /* harmony import */ var _chenfengyuan_vue_carousel__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_chenfengyuan_vue_carousel__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var vue_sweetalert2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vue-sweetalert2 */ "./node_modules/vue-sweetalert2/src/index.js");
+/* harmony import */ var vue_sweetalert2__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vue-sweetalert2 */ "./node_modules/vue-sweetalert2/src/index.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
@@ -58002,7 +58005,7 @@ Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
-Vue.use(vue_sweetalert2__WEBPACK_IMPORTED_MODULE_13__["default"]);
+Vue.use(vue_sweetalert2__WEBPACK_IMPORTED_MODULE_12__["default"]);
 Vue.use(_chenfengyuan_vue_carousel__WEBPACK_IMPORTED_MODULE_11___default.a);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
