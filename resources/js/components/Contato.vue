@@ -101,7 +101,7 @@
         mounted() {
                 
                 axios
-                .get('http://18.228.42.180/admin/contato/lista')
+                .get('http://www.m2center.com.br/admin/contato/lista')
                 .then(response => (
                     this.titulo_contato = response.data[0].titulo_contato,
                     this.endereco = response.data[0].endereco,
@@ -128,7 +128,7 @@
                 e.preventDefault();
                 let currentObj = this;
 
-                axios.post('http://18.228.42.180/admin/contato/atualizar', {
+                axios.post('http://www.m2center.com.br/admin/contato/atualizar', {
                     titulo_contato: this.titulo_contato,
                     endereco: this.endereco,
                     cidade: this.cidade,

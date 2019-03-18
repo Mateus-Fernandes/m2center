@@ -156,7 +156,7 @@
         mounted: function mounted() {
             this.getVueItems();
             axios
-            .get('http://18.228.42.180/admin/dashboard/lista')
+            .get('http://www.m2center.com.br/admin/dashboard/lista')
             .then(response => (
                 this.titulo_pag_servicos = response.data[0].titulo_pag_servicos,
                 this.descricao_pag_servicos = response.data[0].descricao_pag_servicos                                                
@@ -165,14 +165,14 @@
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://18.228.42.180/admin/servico/lista').then(function (response) {
+                axios.get('http://www.m2center.com.br/admin/servico/lista').then(function (response) {
                     _this.servico = response.data;
                 });
             },
             editarpags(e) {
                 e.preventDefault();
                 let currentObj = this;
-                axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+                axios.post('http://www.m2center.com.br/admin/dashboard/atualizar', {
                     titulo_pag_servicos: this.titulo_pag_servicos,
                     descricao_pag_servicos: this.descricao_pag_servicos
                 })
@@ -201,18 +201,18 @@
                 var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
                 let imagem_serv_wordres;
                 if(imagem_serv_word != '')
-                    imagem_serv_wordres = 'http://18.228.42.180/'+imagem_serv_word.replace("public", "storage");
+                    imagem_serv_wordres = 'http://www.m2center.com.br/'+imagem_serv_word.replace("public", "storage");
                 else
                     imagem_serv_wordres = this.imagem_serv;
 
                 var icone_serv_word = document.getElementsByName('icone_serv')[0].value;
                 let icone_serv_wordres;
                 if(icone_serv_word != '')
-                    icone_serv_wordres = 'http://18.228.42.180/'+icone_serv_word.replace("public", "storage");
+                    icone_serv_wordres = 'http://www.m2center.com.br/'+icone_serv_word.replace("public", "storage");
                 else
                     icone_serv_wordres = this.icone_serv;                             
                 axios
-                .post('http://18.228.42.180/admin/servico/adicionar',{
+                .post('http://www.m2center.com.br/admin/servico/adicionar',{
                     titulo_serv: this.titulo_serv,
                     descricao_serv: this.descricao_serv,
                     resumo_serv: this.resumo_serv,
@@ -238,7 +238,7 @@
                 
                 
                 axios
-                .get('http://18.228.42.180/admin/servico/editar/'+id)
+                .get('http://www.m2center.com.br/admin/servico/editar/'+id)
                 .then(response => (
                     this.titulo_serv = response.data.titulo_serv,
                     this.descricao_serv = response.data.descricao_serv ,
@@ -254,19 +254,19 @@
                 var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
                 let imagem_serv_wordres;
                 if(imagem_serv_word != '')
-                    imagem_serv_wordres = 'http://18.228.42.180/'+imagem_serv_word.replace("public", "storage");
+                    imagem_serv_wordres = 'http://www.m2center.com.br/'+imagem_serv_word.replace("public", "storage");
                 else
                     imagem_serv_wordres = this.imagem_serv;
 
                 var icone_serv_word = document.getElementsByName('icone_serv')[0].value;
                 let icone_serv_wordres;
                 if(icone_serv_word != '')
-                    icone_serv_wordres = 'http://18.228.42.180/'+icone_serv_word.replace("public", "storage");
+                    icone_serv_wordres = 'http://www.m2center.com.br/'+icone_serv_word.replace("public", "storage");
                 else
                     icone_serv_wordres = this.icone_serv;                    
 
                 axios
-                .post('http://18.228.42.180/admin/servico/atualizar/'+id,{
+                .post('http://www.m2center.com.br/admin/servico/atualizar/'+id,{
                     titulo_serv: this.titulo_serv,
                     descricao_serv: this.descricao_serv,
                     resumo_serv: this.resumo_serv,
@@ -286,7 +286,7 @@
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://18.228.42.180/admin/servico/excluir/'+id,{
+                    .post('http://www.m2center.com.br/admin/servico/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

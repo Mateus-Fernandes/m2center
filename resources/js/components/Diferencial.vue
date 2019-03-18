@@ -127,7 +127,7 @@
         mounted: function mounted() {
             this.getVueItems();
             axios
-            .get('http://18.228.42.180/admin/dashboard/lista')
+            .get('http://www.m2center.com.br/admin/dashboard/lista')
             .then(response => (
                 this.texto_diferencial_i = response.data[0].texto_diferencial_i                                            
                 ))            
@@ -137,14 +137,14 @@
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://18.228.42.180/admin/diferencial/lista').then(function (response) {
+                axios.get('http://www.m2center.com.br/admin/diferencial/lista').then(function (response) {
                     _this.diferencial = response.data;
                 });
             },
             editarpags(e) {
                 e.preventDefault();
                 let currentObj = this;
-                axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+                axios.post('http://www.m2center.com.br/admin/dashboard/atualizar', {
                     texto_diferencial_i: this.texto_diferencial_i
                 })
                 .then(function (response) {
@@ -169,12 +169,12 @@
                 var icone_dif_word = document.getElementsByName('icone_dif')[0].value;
                 let icone_dif_wordres;
                 if(icone_dif_word != '')
-                    icone_dif_wordres = 'http://18.228.42.180/'+icone_dif_word.replace("public", "storage");
+                    icone_dif_wordres = 'http://www.m2center.com.br/'+icone_dif_word.replace("public", "storage");
                 else
                     icone_dif_wordres = this.icone_dif;
                        
                 axios
-                .post('http://18.228.42.180/admin/diferencial/adicionar',{
+                .post('http://www.m2center.com.br/admin/diferencial/adicionar',{
                     resumo_dif: this.resumo_dif,
                     user_id: 1,
                     icone_dif: icone_dif_wordres,
@@ -194,7 +194,7 @@
                 this.editarf = true;
                 this.adicionarif = false;                  
                 axios
-                .get('http://18.228.42.180/admin/diferencial/editar/'+id)
+                .get('http://www.m2center.com.br/admin/diferencial/editar/'+id)
                 .then(response => (
                     this.resumo_dif = response.data.resumo_dif,
                     this.icone_dif = response.data.icone_dif,   
@@ -205,12 +205,12 @@
                 var icone_dif_word = document.getElementsByName('icone_dif')[0].value;
                 let icone_dif_wordres;
                 if(icone_dif_word != '')
-                    icone_dif_wordres = 'http://18.228.42.180/'+icone_dif_word.replace("public", "storage");
+                    icone_dif_wordres = 'http://www.m2center.com.br/'+icone_dif_word.replace("public", "storage");
                 else
                     icone_dif_wordres = this.icone_dif;                  
 
                 axios
-                .post('http://18.228.42.180/admin/diferencial/atualizar/'+id,{
+                .post('http://www.m2center.com.br/admin/diferencial/atualizar/'+id,{
                     resumo_dif: this.resumo_dif,
                     icone_dif: icone_dif_wordres,
                 })
@@ -227,7 +227,7 @@
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://18.228.42.180/admin/diferencial/excluir/'+id,{
+                    .post('http://www.m2center.com.br/admin/diferencial/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

@@ -38,7 +38,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 const FilePond = vueFilePond( FilePondPluginFileValidateType, FilePondPluginImagePreview );
 setOptions({
     server: {
-        url: 'http://18.228.42.180/admin/quemsomos/upload',
+        url: 'http://www.m2center.com.br/admin/quemsomos/upload',
         process: {
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),

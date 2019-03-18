@@ -1868,7 +1868,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     this.getVueItems();
-    axios.get('http://18.228.42.180/admin/dashboard/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/admin/dashboard/lista').then(function (response) {
       return _this2.titulo_pag_blog = response.data[0].titulo_pag_blog, _this2.descricao_pag_blog = response.data[0].descricao_pag_blog;
     });
   },
@@ -1876,7 +1876,7 @@ __webpack_require__.r(__webpack_exports__);
     getVueItems: function getVueItems() {
       var _this = this;
 
-      axios.get('http://18.228.42.180/admin/blog/lista').then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/blog/lista').then(function (response) {
         _this.blogs = response.data;
       });
     },
@@ -1886,7 +1886,7 @@ __webpack_require__.r(__webpack_exports__);
     editarpags: function editarpags(e) {
       e.preventDefault();
       var currentObj = this;
-      axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+      axios.post('http://www.m2center.com.br/admin/dashboard/atualizar', {
         titulo_pag_blog: this.titulo_pag_blog,
         descricao_pag_blog: this.descricao_pag_blog
       }).then(function (response) {
@@ -1904,10 +1904,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     adicionar: function adicionar() {
-      window.location.href = "http://18.228.42.180/admin/blog/adicionar";
+      window.location.href = "http://www.m2center.com.br/admin/blog/adicionar";
     },
     editar: function editar(id) {
-      window.location.href = 'http://18.228.42.180/admin/blog/editar/' + id;
+      window.location.href = 'http://www.m2center.com.br/admin/blog/editar/' + id;
     },
     excluir: function excluir(id) {
       var _this3 = this;
@@ -1915,7 +1915,7 @@ __webpack_require__.r(__webpack_exports__);
       var del = confirm("Tem certeza que quer remover este registro?");
 
       if (del == true) {
-        axios.post('http://18.228.42.180/admin/blog/excluir/' + id, {}).then(function (response) {
+        axios.post('http://www.m2center.com.br/admin/blog/excluir/' + id, {}).then(function (response) {
           return _this3.getVueItems();
         }).catch(function (error) {
           debugger;
@@ -2037,7 +2037,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://18.228.42.180/admin/contato/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/admin/contato/lista').then(function (response) {
       return _this.titulo_contato = response.data[0].titulo_contato, _this.endereco = response.data[0].endereco, _this.cidade = response.data[0].cidade, _this.bairro = response.data[0].bairro, _this.texto_rodape_inicial = response.data[0].texto_rodape_inicial, _this.cep = response.data[0].cep, _this.email = response.data[0].email, _this.funcionamento_semana = response.data[0].funcionamento_semana, _this.funcionamento_hora = response.data[0].funcionamento_hora;
     });
   },
@@ -2049,7 +2049,7 @@ __webpack_require__.r(__webpack_exports__);
     editar: function editar(e) {
       e.preventDefault();
       var currentObj = this;
-      axios.post('http://18.228.42.180/admin/contato/atualizar', {
+      axios.post('http://www.m2center.com.br/admin/contato/atualizar', {
         titulo_contato: this.titulo_contato,
         endereco: this.endereco,
         cidade: this.cidade,
@@ -2213,7 +2213,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     this.getVueItems();
-    axios.get('http://18.228.42.180/admin/dashboard/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/admin/dashboard/lista').then(function (response) {
       return _this2.texto_diferencial_i = response.data[0].texto_diferencial_i;
     });
   },
@@ -2221,14 +2221,14 @@ __webpack_require__.r(__webpack_exports__);
     getVueItems: function getVueItems() {
       var _this = this;
 
-      axios.get('http://18.228.42.180/admin/diferencial/lista').then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/diferencial/lista').then(function (response) {
         _this.diferencial = response.data;
       });
     },
     editarpags: function editarpags(e) {
       e.preventDefault();
       var currentObj = this;
-      axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+      axios.post('http://www.m2center.com.br/admin/dashboard/atualizar', {
         texto_diferencial_i: this.texto_diferencial_i
       }).then(function (response) {
         currentObj.output = response.data;
@@ -2254,8 +2254,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var icone_dif_word = document.getElementsByName('icone_dif')[0].value;
       var icone_dif_wordres;
-      if (icone_dif_word != '') icone_dif_wordres = 'http://18.228.42.180/' + icone_dif_word.replace("public", "storage");else icone_dif_wordres = this.icone_dif;
-      axios.post('http://18.228.42.180/admin/diferencial/adicionar', {
+      if (icone_dif_word != '') icone_dif_wordres = 'http://www.m2center.com.br/' + icone_dif_word.replace("public", "storage");else icone_dif_wordres = this.icone_dif;
+      axios.post('http://www.m2center.com.br/admin/diferencial/adicionar', {
         resumo_dif: this.resumo_dif,
         user_id: 1,
         icone_dif: icone_dif_wordres
@@ -2272,7 +2272,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$modal.show('hello-world');
       this.editarf = true;
       this.adicionarif = false;
-      axios.get('http://18.228.42.180/admin/diferencial/editar/' + id).then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/diferencial/editar/' + id).then(function (response) {
         return _this4.resumo_dif = response.data.resumo_dif, _this4.icone_dif = response.data.icone_dif, _this4.id = response.data.id;
       });
     },
@@ -2281,8 +2281,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var icone_dif_word = document.getElementsByName('icone_dif')[0].value;
       var icone_dif_wordres;
-      if (icone_dif_word != '') icone_dif_wordres = 'http://18.228.42.180/' + icone_dif_word.replace("public", "storage");else icone_dif_wordres = this.icone_dif;
-      axios.post('http://18.228.42.180/admin/diferencial/atualizar/' + id, {
+      if (icone_dif_word != '') icone_dif_wordres = 'http://www.m2center.com.br/' + icone_dif_word.replace("public", "storage");else icone_dif_wordres = this.icone_dif;
+      axios.post('http://www.m2center.com.br/admin/diferencial/atualizar/' + id, {
         resumo_dif: this.resumo_dif,
         icone_dif: icone_dif_wordres
       }).then(function (response) {
@@ -2298,7 +2298,7 @@ __webpack_require__.r(__webpack_exports__);
       var del = confirm("Tem certeza que quer remover este registro?");
 
       if (del == true) {
-        axios.post('http://18.228.42.180/admin/diferencial/excluir/' + id, {}).then(function (response) {
+        axios.post('http://www.m2center.com.br/admin/diferencial/excluir/' + id, {}).then(function (response) {
           return _this6.getVueItems();
         }).catch(function (error) {
           debugger;
@@ -2439,7 +2439,7 @@ __webpack_require__.r(__webpack_exports__);
     getVueItems: function getVueItems() {
       var _this = this;
 
-      axios.get('http://18.228.42.180/admin/equipe/lista').then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/equipe/lista').then(function (response) {
         _this.equipe = response.data;
       });
     },
@@ -2454,8 +2454,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var foto_membro_word = document.getElementsByName('foto_membro')[0].value;
       var foto_membro_wordres;
-      if (foto_membro_word != '') foto_membro_wordres = 'http://18.228.42.180/' + foto_membro_word.replace("public", "storage");else foto_membro_wordres = this.foto_membro;
-      axios.post('http://18.228.42.180/admin/equipe/adicionar', {
+      if (foto_membro_word != '') foto_membro_wordres = 'http://www.m2center.com.br/' + foto_membro_word.replace("public", "storage");else foto_membro_wordres = this.foto_membro;
+      axios.post('http://www.m2center.com.br/admin/equipe/adicionar', {
         nome_membro: this.nome_membro,
         cargo_membro: this.cargo_membro,
         descricao_membro: this.descricao_membro,
@@ -2474,7 +2474,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$modal.show('hello-world');
       this.editarf = true;
       this.adicionarif = false;
-      axios.get('http://18.228.42.180/admin/equipe/editar/' + id).then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/equipe/editar/' + id).then(function (response) {
         return _this3.nome_membro = response.data.nome_membro, _this3.cargo_membro = response.data.cargo_membro, _this3.descricao_membro = response.data.descricao_membro, _this3.foto_membro = response.data.foto_membro, _this3.id = response.data.id;
       });
     },
@@ -2483,8 +2483,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var foto_membro_word = document.getElementsByName('foto_membro')[0].value;
       var foto_membro_wordres;
-      if (foto_membro_word != '') foto_membro_wordres = 'http://18.228.42.180/' + foto_membro_word.replace("public", "storage");else foto_membro_wordres = this.foto_membro;
-      axios.post('http://18.228.42.180/admin/equipe/atualizar/' + id, {
+      if (foto_membro_word != '') foto_membro_wordres = 'http://www.m2center.com.br/' + foto_membro_word.replace("public", "storage");else foto_membro_wordres = this.foto_membro;
+      axios.post('http://www.m2center.com.br/admin/equipe/atualizar/' + id, {
         nome_membro: this.nome_membro,
         cargo_membro: this.cargo_membro,
         descricao_membro: this.descricao_membro,
@@ -2502,7 +2502,7 @@ __webpack_require__.r(__webpack_exports__);
       var del = confirm("Tem certeza que quer remover este registro?");
 
       if (del == true) {
-        axios.post('http://18.228.42.180/admin/equipe/excluir/' + id, {}).then(function (response) {
+        axios.post('http://www.m2center.com.br/admin/equipe/excluir/' + id, {}).then(function (response) {
           return _this5.getVueItems();
         }).catch(function (error) {
           debugger;
@@ -2612,7 +2612,7 @@ __webpack_require__.r(__webpack_exports__);
     getVueItems: function getVueItems() {
       var _this = this;
 
-      axios.get('http://18.228.42.180/lead/lista').then(function (response) {
+      axios.get('http://www.m2center.com.br/lead/lista').then(function (response) {
         _this.lead = response.data;
       });
     },
@@ -2622,7 +2622,7 @@ __webpack_require__.r(__webpack_exports__);
       var del = confirm("Tem certeza que quer remover este registro?");
 
       if (del == true) {
-        axios.post('http://18.228.42.180/lead/excluir/' + id, {}).then(function (response) {
+        axios.post('http://www.m2center.com.br/lead/excluir/' + id, {}).then(function (response) {
           return _this2.getVueItems();
         }).catch(function (error) {
           debugger;
@@ -2877,7 +2877,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://18.228.42.180/admin/quemsomos/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/admin/quemsomos/lista').then(function (response) {
       return _this.titulo_qs = response.data[0].titulo_qs, _this.subtitulo_qs = response.data[0].subtitulo_qs, _this.historia = response.data[0].historia, _this.historia_inicial = response.data[0].historia_inicial, _this.video = response.data[0].video, _this.missao = response.data[0].missao, _this.i_missao = response.data[0].i_missao, _this.valores = response.data[0].valores, _this.i_valores = response.data[0].i_valores, _this.objetivo = response.data[0].objetivo, _this.i_objetivo = response.data[0].i_objetivo, _this.meta = response.data[0].meta, _this.i_meta = response.data[0].i_meta, document.getElementById("historia").value = response.data[0].historia;
     });
   },
@@ -2891,7 +2891,7 @@ __webpack_require__.r(__webpack_exports__);
       var currentObj = this;
       var videoword = document.getElementsByName('video')[0].value;
       var videowordres;
-      if (videoword != '') videowordres = 'http://18.228.42.180/' + videoword.replace("public", "storage");else videowordres = this.video;
+      if (videoword != '') videowordres = 'http://www.m2center.com.br/' + videoword.replace("public", "storage");else videowordres = this.video;
       var i_missaoword = document.getElementsByName('i_missao')[0].value;
       var i_missaowordres;
       if (i_missaoword != '') i_missaowordres = i_missaoword.replace("public", "storage");else i_missaowordres = this.i_missao;
@@ -2904,7 +2904,7 @@ __webpack_require__.r(__webpack_exports__);
       var i_metaword = document.getElementsByName('i_meta')[0].value;
       var i_metawordres;
       if (i_metaword != '') i_metawordres = i_metaword.replace("public", "storage");else i_metawordres = this.i_meta;
-      axios.post('http://18.228.42.180/admin/quemsomos/atualizar', {
+      axios.post('http://www.m2center.com.br/admin/quemsomos/atualizar', {
         titulo_qs: this.titulo_qs,
         subtitulo_qs: this.subtitulo_qs,
         historia: document.getElementsByName('historiatexto')[0].value,
@@ -3105,7 +3105,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     this.getVueItems();
-    axios.get('http://18.228.42.180/admin/dashboard/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/admin/dashboard/lista').then(function (response) {
       return _this2.titulo_pag_servicos = response.data[0].titulo_pag_servicos, _this2.descricao_pag_servicos = response.data[0].descricao_pag_servicos;
     });
   },
@@ -3113,14 +3113,14 @@ __webpack_require__.r(__webpack_exports__);
     getVueItems: function getVueItems() {
       var _this = this;
 
-      axios.get('http://18.228.42.180/admin/servico/lista').then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/servico/lista').then(function (response) {
         _this.servico = response.data;
       });
     },
     editarpags: function editarpags(e) {
       e.preventDefault();
       var currentObj = this;
-      axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+      axios.post('http://www.m2center.com.br/admin/dashboard/atualizar', {
         titulo_pag_servicos: this.titulo_pag_servicos,
         descricao_pag_servicos: this.descricao_pag_servicos
       }).then(function (response) {
@@ -3148,11 +3148,11 @@ __webpack_require__.r(__webpack_exports__);
 
       var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
       var imagem_serv_wordres;
-      if (imagem_serv_word != '') imagem_serv_wordres = 'http://18.228.42.180/' + imagem_serv_word.replace("public", "storage");else imagem_serv_wordres = this.imagem_serv;
+      if (imagem_serv_word != '') imagem_serv_wordres = 'http://www.m2center.com.br/' + imagem_serv_word.replace("public", "storage");else imagem_serv_wordres = this.imagem_serv;
       var icone_serv_word = document.getElementsByName('icone_serv')[0].value;
       var icone_serv_wordres;
-      if (icone_serv_word != '') icone_serv_wordres = 'http://18.228.42.180/' + icone_serv_word.replace("public", "storage");else icone_serv_wordres = this.icone_serv;
-      axios.post('http://18.228.42.180/admin/servico/adicionar', {
+      if (icone_serv_word != '') icone_serv_wordres = 'http://www.m2center.com.br/' + icone_serv_word.replace("public", "storage");else icone_serv_wordres = this.icone_serv;
+      axios.post('http://www.m2center.com.br/admin/servico/adicionar', {
         titulo_serv: this.titulo_serv,
         descricao_serv: this.descricao_serv,
         resumo_serv: this.resumo_serv,
@@ -3172,7 +3172,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$modal.show('hello-world');
       this.editarf = true;
       this.adicionarif = false;
-      axios.get('http://18.228.42.180/admin/servico/editar/' + id).then(function (response) {
+      axios.get('http://www.m2center.com.br/admin/servico/editar/' + id).then(function (response) {
         return _this4.titulo_serv = response.data.titulo_serv, _this4.descricao_serv = response.data.descricao_serv, _this4.resumo_serv = response.data.resumo_serv, _this4.imagem_serv = response.data.imagem_serv, _this4.icone_serv = response.data.icone_serv, _this4.id = response.data.id;
       });
     },
@@ -3181,11 +3181,11 @@ __webpack_require__.r(__webpack_exports__);
 
       var imagem_serv_word = document.getElementsByName('imagem_serv')[0].value;
       var imagem_serv_wordres;
-      if (imagem_serv_word != '') imagem_serv_wordres = 'http://18.228.42.180/' + imagem_serv_word.replace("public", "storage");else imagem_serv_wordres = this.imagem_serv;
+      if (imagem_serv_word != '') imagem_serv_wordres = 'http://www.m2center.com.br/' + imagem_serv_word.replace("public", "storage");else imagem_serv_wordres = this.imagem_serv;
       var icone_serv_word = document.getElementsByName('icone_serv')[0].value;
       var icone_serv_wordres;
-      if (icone_serv_word != '') icone_serv_wordres = 'http://18.228.42.180/' + icone_serv_word.replace("public", "storage");else icone_serv_wordres = this.icone_serv;
-      axios.post('http://18.228.42.180/admin/servico/atualizar/' + id, {
+      if (icone_serv_word != '') icone_serv_wordres = 'http://www.m2center.com.br/' + icone_serv_word.replace("public", "storage");else icone_serv_wordres = this.icone_serv;
+      axios.post('http://www.m2center.com.br/admin/servico/atualizar/' + id, {
         titulo_serv: this.titulo_serv,
         descricao_serv: this.descricao_serv,
         resumo_serv: this.resumo_serv,
@@ -3204,7 +3204,7 @@ __webpack_require__.r(__webpack_exports__);
       var del = confirm("Tem certeza que quer remover este registro?");
 
       if (del == true) {
-        axios.post('http://18.228.42.180/admin/servico/excluir/' + id, {}).then(function (response) {
+        axios.post('http://www.m2center.com.br/admin/servico/excluir/' + id, {}).then(function (response) {
           return _this6.getVueItems();
         }).catch(function (error) {
           debugger;
@@ -67935,7 +67935,7 @@ Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]); // Import Vue FileP
 var FilePond = vue_filepond__WEBPACK_IMPORTED_MODULE_4___default()(filepond_plugin_file_validate_type__WEBPACK_IMPORTED_MODULE_7___default.a, filepond_plugin_image_preview__WEBPACK_IMPORTED_MODULE_8___default.a);
 Object(vue_filepond__WEBPACK_IMPORTED_MODULE_4__["setOptions"])({
   server: {
-    url: 'http://18.228.42.180/admin/quemsomos/upload',
+    url: 'http://www.m2center.com.br/admin/quemsomos/upload',
     process: {
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

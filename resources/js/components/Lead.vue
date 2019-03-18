@@ -57,7 +57,7 @@
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://18.228.42.180/lead/lista').then(function (response) {
+                axios.get('http://www.m2center.com.br/lead/lista').then(function (response) {
                     _this.lead = response.data;
                 });
             },           
@@ -65,7 +65,7 @@
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://18.228.42.180/lead/excluir/'+id,{
+                    .post('http://www.m2center.com.br/lead/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

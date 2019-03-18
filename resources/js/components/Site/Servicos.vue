@@ -1,6 +1,6 @@
 <template>
 <div>
-    <section class="headerinterna" style="background-image:url(http://18.228.42.180/images/assets/nossos-servicos-v2.jpg);">
+    <section class="headerinterna" style="background-image:url(http://www.m2center.com.br/images/assets/nossos-servicos-v2.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2 style="opacity:0;">{{titulo_pag_servicos}}</h2>
@@ -65,11 +65,11 @@ export default {
         },
         mounted() {
                 var _this = this;
-                axios.get('http://18.228.42.180/api/servico/lista').then(function (response) {
+                axios.get('http://www.m2center.com.br/api/servico/lista').then(function (response) {
                     _this.servico = response.data;
                 });
                 axios
-                .get('http://18.228.42.180/api/dashboard/lista')
+                .get('http://www.m2center.com.br/api/dashboard/lista')
                 .then(response => (
                     this.titulo_pag_servicos = response.data[0].titulo_pag_servicos,
                      this.descricao_pag_servicos = response.data[0].descricao_pag_servicos                                                                     

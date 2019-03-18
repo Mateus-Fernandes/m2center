@@ -234,7 +234,7 @@
         mounted() {
           
                 axios
-                .get('http://18.228.42.180/admin/quemsomos/lista')
+                .get('http://www.m2center.com.br/admin/quemsomos/lista')
                 .then(response => (
                     this.titulo_qs = response.data[0].titulo_qs,
                     this.subtitulo_qs = response.data[0].subtitulo_qs,
@@ -270,7 +270,7 @@
                 let videowordres;
 
                 if(videoword != '')
-                    videowordres = 'http://18.228.42.180/'+ videoword.replace("public", "storage");
+                    videowordres = 'http://www.m2center.com.br/'+ videoword.replace("public", "storage");
                 else
                     videowordres = this.video;
                 
@@ -302,7 +302,7 @@
                 else
                     i_metawordres = this.i_meta;    
 
-                axios.post('http://18.228.42.180/admin/quemsomos/atualizar', {
+                axios.post('http://www.m2center.com.br/admin/quemsomos/atualizar', {
                     titulo_qs: this.titulo_qs,
                     subtitulo_qs: this.subtitulo_qs,
                     historia: document.getElementsByName('historiatexto')[0].value,

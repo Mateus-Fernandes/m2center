@@ -98,7 +98,7 @@
             this.getVueItems();
 
             axios
-            .get('http://18.228.42.180/admin/dashboard/lista')
+            .get('http://www.m2center.com.br/admin/dashboard/lista')
             .then(response => (
                 this.titulo_pag_blog = response.data[0].titulo_pag_blog,
                 this.descricao_pag_blog = response.data[0].descricao_pag_blog                                                
@@ -111,7 +111,7 @@
         methods:{
             getVueItems: function getVueItems() {
                 var _this = this;
-                axios.get('http://18.228.42.180/admin/blog/lista').then(function (response) {
+                axios.get('http://www.m2center.com.br/admin/blog/lista').then(function (response) {
                     _this.blogs = response.data;
                 });                
 
@@ -123,7 +123,7 @@
             editarpags(e) {
                 e.preventDefault();
                 let currentObj = this;
-                axios.post('http://18.228.42.180/admin/dashboard/atualizar', {
+                axios.post('http://www.m2center.com.br/admin/dashboard/atualizar', {
                     titulo_pag_blog: this.titulo_pag_blog,
                     descricao_pag_blog: this.descricao_pag_blog
                 })
@@ -140,16 +140,16 @@
             },            
 
             adicionar(){
-                window.location.href = "http://18.228.42.180/admin/blog/adicionar"               
+                window.location.href = "http://www.m2center.com.br/admin/blog/adicionar"               
             },                        
             editar(id){
-                window.location.href = 'http://18.228.42.180/admin/blog/editar/'+id                                
+                window.location.href = 'http://www.m2center.com.br/admin/blog/editar/'+id                                
             },
             excluir(id){
                 var del=confirm("Tem certeza que quer remover este registro?");
                 if (del==true){
                     axios
-                    .post('http://18.228.42.180/admin/blog/excluir/'+id,{
+                    .post('http://www.m2center.com.br/admin/blog/excluir/'+id,{
                     })
                     .then(response => (
                         this.getVueItems()                    

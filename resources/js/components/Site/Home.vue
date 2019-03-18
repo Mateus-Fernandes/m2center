@@ -1,7 +1,7 @@
 <template>
 <div>
         <div class="banner">
-            <div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>
+            <div class="example-slide"><img class="abs" src="http://www.m2center.com.br/images/banner01.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>
         </div>
 
     <section class="historia">
@@ -86,7 +86,7 @@
                     <h3 data-aos="fade-right">#somostodosm2</h3>
                 </div>
                 <div class="logocaixa" data-aos="fade-right">
-                    <img src="http://18.228.42.180/images/assets/logo-caixa.png" alt="">
+                    <img src="http://www.m2center.com.br/images/assets/logo-caixa.png" alt="">
                 </div>
             </div>
         </div>
@@ -110,39 +110,39 @@ export default {
                 historia_inicial: '',
                 data: [
                 '',
-                '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>',
+                '<div class="example-slide"><img class="abs" src="http://www.m2center.com.br/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>',
                 ],                                                                                  
             };
         },       
         mounted() {
             
                 axios
-                .get('http://18.228.42.180/api/diferencial/lista')
+                .get('http://www.m2center.com.br/api/diferencial/lista')
                 .then(response => (
                     this.diferencial = response.data                                                                      
                     ));
                     
                 axios
-                .get('http://18.228.42.180/api/servico/lista')
+                .get('http://www.m2center.com.br/api/servico/lista')
                 .then(response => (
                     
                     this.servico =  response.data.slice(0, 4)                                                                      
                     ));
 
                 axios
-                .get('http://18.228.42.180/api/blog/lista')
+                .get('http://www.m2center.com.br/api/blog/lista')
                 .then(response => (
                     this.blog = response.data                                                                      
                     ));
 
                 axios
-                .get('http://18.228.42.180/api/dashboard/lista')
+                .get('http://www.m2center.com.br/api/dashboard/lista')
                 .then(response => (
                     this.texto_diferencial_i = response.data[0].texto_diferencial_i                                                                      
                     ));
                     
                 axios
-                .get('http://18.228.42.180/api/quemsomos/lista')
+                .get('http://www.m2center.com.br/api/quemsomos/lista')
                 .then(response => (
                     this.historia_inicial = response.data[0].historia_inicial                                                                      
                     ));                    
@@ -150,7 +150,7 @@ export default {
         },        
         methods: {
             visualizar(id){
-                window.location = "http://18.228.42.180/blog/" + id;      
+                window.location = "http://www.m2center.com.br/blog/" + id;      
             }
         }
 }

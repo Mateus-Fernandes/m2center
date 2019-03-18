@@ -3,7 +3,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <router-link :to="{ name: 'home' }"><img src="http://18.228.42.180/images/assets/logo.png" alt="Logo M2 Center"></router-link>
+                <router-link :to="{ name: 'home' }"><img src="http://www.m2center.com.br/images/assets/logo.png" alt="Logo M2 Center"></router-link>
             </div>
             <div class="menu">
                     <nav role="navigation" class="menuv2">
@@ -45,7 +45,7 @@
                 <p><b>{{funcionamento_semana}}:</b> {{funcionamento_hora}}</p>
             </div>
             <div class="formulario" data-aos="fade-up">
-                <form action="http://18.228.42.180/envia" method="post">
+                <form action="http://www.m2center.com.br/envia" method="post">
                     <div class="cadaInput">
                             <input type="text" name="nome_lead" id="nome" placeholder="Nome completo" :class="{ 'is-invalid': hasError('nome_lead') }" v-model="form.nome_lead" required>
                             <div v-if="hasError('nome_lead')" class="invalid-feedback">@{{ getError('nome_lead') }}</div>
@@ -135,7 +135,7 @@
                         <li><router-link :to="{ name: 'servicos' }">Serviços</router-link></li>
                         <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
                         <li><a href="" class="contatofooter" v-scroll-to="'#contato'">Contato</a></li>
-                        <li><router-link :to="{ name: 'home' }"><img src="http://18.228.42.180/images/assets/logo-footer.png" alt=""></router-link>></li>
+                        <li><router-link :to="{ name: 'home' }"><img src="http://www.m2center.com.br/images/assets/logo-footer.png" alt=""></router-link>></li>
                     </ul>
                 </div>
             </div>
@@ -169,7 +169,7 @@ export default {
         mounted() {
                 
                 axios
-                .get('http://18.228.42.180/api/contato/lista')
+                .get('http://www.m2center.com.br/api/contato/lista')
                 .then(response => (
                     this.titulo_contato = response.data[0].titulo_contato,
                     this.endereco = response.data[0].endereco,
@@ -191,7 +191,7 @@ export default {
                     form_data.append('mensagem_lead', this.form.mensagem_lead);
                     form_data.append('g-recaptcha-response', grecaptcha.getResponse());
 
-                    axios.post('http://18.228.42.180/envia', form_data)
+                    axios.post('http://www.m2center.com.br/envia', form_data)
                         .then(response => {
                             this.$swal({
                                 title: 'Mensagem enviada com sucesso!',

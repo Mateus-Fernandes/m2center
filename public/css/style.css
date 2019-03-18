@@ -477,8 +477,8 @@ nav.stroke ul li a:hover:after {
 
 .banner {
   background: #f50;
-  mask-image: url(http://18.228.42.180/images/svgbanner.svg);
-  -webkit-mask-image: url(http://18.228.42.180/images/svgbanner.svg);
+  mask-image: url(http://www.m2center.com.br/images/svgbanner.svg);
+  -webkit-mask-image: url(http://www.m2center.com.br/images/svgbanner.svg);
   mask-mode: alpha;
   -webkit-mask-mode: alpha;
   mask-repeat: no-repeat;
@@ -685,8 +685,8 @@ path#fillup {
   text-decoration: none;
   text-transform: uppercase;
   border: 5px solid #d0d0d000;
-  -o-border-image: url(http://18.228.42.180/images/border02.svg) 47% round;
-     border-image: url(http://18.228.42.180/images/border02.svg) 47% round;
+  -o-border-image: url(http://www.m2center.com.br/images/border02.svg) 47% round;
+     border-image: url(http://www.m2center.com.br/images/border02.svg) 47% round;
   padding: 22px 34px;
   background: transparent;
   border-image-width: 100%;
@@ -749,7 +749,7 @@ img.abs {
   margin-top: -109px;
   z-index: 2;
   position: relative;
-  background: url(http://18.228.42.180/images/assets/historia.jpg) no-repeat;
+  background: url(http://www.m2center.com.br/images/assets/historia.jpg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -939,7 +939,7 @@ img.abs {
 }
 
 .caixa {
-  background: url(http://18.228.42.180/images/assets/bg-caixa.png) no-repeat #fff;
+  background: url(http://www.m2center.com.br/images/assets/bg-caixa.png) no-repeat #fff;
   border-radius: 12px;
   padding-top: 9px;
   padding-bottom: 5px;
@@ -1209,7 +1209,7 @@ footer a {
 }
 
 .imagemVideo::before {
-  content: url(http://18.228.42.180/images/assets/marca.png);
+  content: url(http://www.m2center.com.br/images/assets/marca.png);
   position: absolute;
   top: 14px;
   mix-blend-mode: luminosity;
@@ -1786,7 +1786,7 @@ section.conteudoBlog {
 .minhadiv {
   width: 200px;
   height: 70px;
-  background-image: url("http://18.228.42.180/images/border.svg");
+  background-image: url("http://www.m2center.com.br/images/border.svg");
   background-size: cover;
 }
 

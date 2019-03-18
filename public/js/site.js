@@ -2778,7 +2778,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://18.228.42.180/api/contato/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/contato/lista').then(function (response) {
       return _this.titulo_contato = response.data[0].titulo_contato, _this.endereco = response.data[0].endereco, _this.cidade = response.data[0].cidade, _this.bairro = response.data[0].bairro, _this.cep = response.data[0].cep, _this.email = response.data[0].email, _this.funcionamento_semana = response.data[0].funcionamento_semana, _this.funcionamento_hora = response.data[0].funcionamento_hora;
     });
   },
@@ -2792,7 +2792,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       form_data.append('telefone_lead', this.form.telefone_lead);
       form_data.append('mensagem_lead', this.form.mensagem_lead);
       form_data.append('g-recaptcha-response', grecaptcha.getResponse());
-      axios.post('http://18.228.42.180/envia', form_data).then(function (response) {
+      axios.post('http://www.m2center.com.br/envia', form_data).then(function (response) {
         _this2.$swal({
           title: 'Mensagem enviada com sucesso!',
           type: 'success'
@@ -2920,16 +2920,16 @@ __webpack_require__.r(__webpack_exports__);
 
     var _this = this;
 
-    axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/blog/lista').then(function (response) {
       _this.blog = response.data;
     });
-    axios.get('http://18.228.42.180/api/dashboard/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/dashboard/lista').then(function (response) {
       return _this2.titulo_pag_blog = response.data[0].titulo_pag_blog, _this2.descricao_pag_blog = response.data[0].descricao_pag_blog;
     });
   },
   methods: {
     visualizar: function visualizar(id) {
-      window.location = "http://18.228.42.180/blog/" + id;
+      window.location = "http://www.m2center.com.br/blog/" + id;
     }
   }
 });
@@ -3008,16 +3008,16 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     var rota = this.$route.params.id;
-    axios.get('http://18.228.42.180/api/blog/lista/' + rota).then(function (response) {
+    axios.get('http://www.m2center.com.br/api/blog/lista/' + rota).then(function (response) {
       _this.titulo_blog = response.data.titulo_blog, _this.data = response.data.created_at, _this.texto_blog = response.data.texto_blog, _this.imagem_blog = response.data.imagem_blog;
     });
-    axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/blog/lista').then(function (response) {
       _this.blog = response.data.slice(0, 2);
     });
   },
   methods: {
     visualizar: function visualizar(id) {
-      window.location = "http://18.228.42.180/blog/" + id;
+      window.location = "http://www.m2center.com.br/blog/" + id;
     }
   }
 });
@@ -3144,31 +3144,31 @@ __webpack_require__.r(__webpack_exports__);
       blog: [],
       texto_diferencial_i: '',
       historia_inicial: '',
-      data: ['', '<div class="example-slide"><img class="abs" src="http://18.228.42.180/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>']
+      data: ['', '<div class="example-slide"><img class="abs" src="http://www.m2center.com.br/images/banner02.jpg" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1 class="segundo"><span>Ninguém vende como a M2</span><br><br></h1></div></div></div>']
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://18.228.42.180/api/diferencial/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/diferencial/lista').then(function (response) {
       return _this.diferencial = response.data;
     });
-    axios.get('http://18.228.42.180/api/servico/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/servico/lista').then(function (response) {
       return _this.servico = response.data.slice(0, 4);
     });
-    axios.get('http://18.228.42.180/api/blog/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/blog/lista').then(function (response) {
       return _this.blog = response.data;
     });
-    axios.get('http://18.228.42.180/api/dashboard/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/dashboard/lista').then(function (response) {
       return _this.texto_diferencial_i = response.data[0].texto_diferencial_i;
     });
-    axios.get('http://18.228.42.180/api/quemsomos/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/quemsomos/lista').then(function (response) {
       return _this.historia_inicial = response.data[0].historia_inicial;
     });
   },
   methods: {
     visualizar: function visualizar(id) {
-      window.location = "http://18.228.42.180/blog/" + id;
+      window.location = "http://www.m2center.com.br/blog/" + id;
     }
   }
 });
@@ -3343,13 +3343,13 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this2 = this;
 
-    axios.get('http://18.228.42.180/api/quemsomos/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/quemsomos/lista').then(function (response) {
       return _this2.titulo_qs = response.data[0].titulo_qs, _this2.subtitulo_qs = response.data[0].subtitulo_qs, _this2.historia = response.data[0].historia, _this2.video = response.data[0].video, _this2.missao = response.data[0].missao, _this2.i_missao = response.data[0].i_missao, _this2.valores = response.data[0].valores, _this2.i_valores = response.data[0].i_valores, _this2.objetivo = response.data[0].objetivo, _this2.i_objetivo = response.data[0].i_objetivo, _this2.meta = response.data[0].meta, _this2.i_meta = response.data[0].i_meta, _this2.historia = response.data[0].historia;
     });
 
     var _this = this;
 
-    axios.get('http://18.228.42.180/api/equipe/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/equipe/lista').then(function (response) {
       _this.equipe = response.data;
     });
   },
@@ -3449,10 +3449,10 @@ __webpack_require__.r(__webpack_exports__);
 
     var _this = this;
 
-    axios.get('http://18.228.42.180/api/servico/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/servico/lista').then(function (response) {
       _this.servico = response.data;
     });
-    axios.get('http://18.228.42.180/api/dashboard/lista').then(function (response) {
+    axios.get('http://www.m2center.com.br/api/dashboard/lista').then(function (response) {
       return _this2.titulo_pag_servicos = response.data[0].titulo_pag_servicos, _this2.descricao_pag_servicos = response.data[0].descricao_pag_servicos;
     });
   }
@@ -40191,7 +40191,7 @@ var render = function() {
               _c("router-link", { attrs: { to: { name: "home" } } }, [
                 _c("img", {
                   attrs: {
-                    src: "http://18.228.42.180/images/assets/logo.png",
+                    src: "http://www.m2center.com.br/images/assets/logo.png",
                     alt: "Logo M2 Center"
                   }
                 })
@@ -40390,7 +40390,7 @@ var render = function() {
                 "form",
                 {
                   attrs: {
-                    action: "http://18.228.42.180/envia",
+                    action: "http://www.m2center.com.br/envia",
                     method: "post"
                   }
                 },
@@ -40893,7 +40893,7 @@ var render = function() {
                       _c("img", {
                         attrs: {
                           src:
-                            "http://18.228.42.180/images/assets/logo-footer.png",
+                            "http://www.m2center.com.br/images/assets/logo-footer.png",
                           alt: ""
                         }
                       })
@@ -40982,7 +40982,8 @@ var render = function() {
       {
         staticClass: "headerinterna",
         staticStyle: {
-          "background-image": "url(http://18.228.42.180/images/assets/blog.jpg)"
+          "background-image":
+            "url(http://www.m2center.com.br/images/assets/blog.jpg)"
         }
       },
       [
@@ -41512,7 +41513,10 @@ var staticRenderFns = [
       _c("div", { staticClass: "example-slide" }, [
         _c("img", {
           staticClass: "abs",
-          attrs: { src: "http://18.228.42.180/images/banner01.jpg", alt: "" }
+          attrs: {
+            src: "http://www.m2center.com.br/images/banner01.jpg",
+            alt: ""
+          }
         }),
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "dozecenter dentroBanner" }, [
@@ -41582,7 +41586,7 @@ var staticRenderFns = [
           [
             _c("img", {
               attrs: {
-                src: "http://18.228.42.180/images/assets/logo-caixa.png",
+                src: "http://www.m2center.com.br/images/assets/logo-caixa.png",
                 alt: ""
               }
             })
@@ -41642,7 +41646,7 @@ var render = function() {
           staticClass: "headerinterna",
           staticStyle: {
             "background-image":
-              "url(http://18.228.42.180/images/assets/quem-somos.jpg)"
+              "url(http://www.m2center.com.br/images/assets/quem-somos.jpg)"
           }
         },
         [
@@ -41679,7 +41683,7 @@ var render = function() {
                   _c("video", {
                     ref: "video",
                     attrs: {
-                      src: "http://18.228.42.180/images/videom2corp.mp4"
+                      src: "http://www.m2center.com.br/images/videom2corp.mp4"
                     }
                   }),
                   _vm._v(" "),
@@ -42017,7 +42021,7 @@ var render = function() {
         staticClass: "headerinterna",
         staticStyle: {
           "background-image":
-            "url(http://18.228.42.180/images/assets/nossos-servicos-v2.jpg)"
+            "url(http://www.m2center.com.br/images/assets/nossos-servicos-v2.jpg)"
         }
       },
       [
