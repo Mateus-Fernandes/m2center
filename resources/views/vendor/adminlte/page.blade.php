@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="navbar-brand">
-                            <img src="http://18.228.42.180/images/assets/logo.png" alt="">
+                            <img src="http://www.m2center.com.br/images/assets/logo.png" alt="">
                         </a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                             <i class="fa fa-bars"></i>
@@ -41,9 +41,9 @@
             <!-- Logo -->
             <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><img src="http://18.228.42.180/images/assets/logo-footer.png" alt=""></span>
+                <span class="logo-mini"><img src="http://www.m2center.com.br/images/assets/logo-footer.png" alt=""></span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><img src="http://18.228.42.180/images/assets/logo-footer.png" alt=""></span>
+                <span class="logo-lg"><img src="http://www.m2center.com.br/images/assets/logo-footer.png" alt=""></span>
             </a>
 
             <!-- Header Navbar -->

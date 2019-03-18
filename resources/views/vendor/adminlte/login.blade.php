@@ -11,7 +11,7 @@
 @section('body')
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}"><img src="http://18.228.42.180/images/assets/logo-footer.png" alt=""></a>
+            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}"><img src="http://www.m2center.com.br/images/assets/logo-footer.png" alt=""></a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
