@@ -179,7 +179,6 @@ export default {
             enviar(e) {
                 e.preventDefault();
                 let currentObj = this;
-
                 axios.post('http://18.228.42.180/envia', {
                     nome_envia: this.nome_envia,
                     telefone_envia: this.telefone_envia,
