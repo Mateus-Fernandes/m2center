@@ -920,6 +920,19 @@ img.abs {
   min-height: 58px;
 }
 
+.rc-anchor-light {
+  background: #262626;
+  color: #fff;
+}
+
+.rc-anchor-light.rc-anchor-normal {
+  border: 1px solid #3e3e3e;
+}
+
+.rc-anchor-logo-portrait {
+  mix-blend-mode: luminosity;
+}
+
 .box {
   position: relative;
   margin-top: 75px;

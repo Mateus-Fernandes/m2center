@@ -57,7 +57,9 @@ import servicos from './components/Site/Servicos.vue'
 import blog from './components/Site/Blog.vue'
 import bloginterno from './components/Site/Bloginterno.vue'
 import VueCarousel from '@chenfengyuan/vue-carousel'
-
+import VueSweetalert2 from 'vue-sweetalert2';
+ 
+Vue.use(VueSweetalert2);
 Vue.use(VueCarousel);
 /**
  * Next, we will create a fresh Vue application instance and attach it to

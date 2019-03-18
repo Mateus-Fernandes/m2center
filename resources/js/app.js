@@ -75,6 +75,7 @@ Vue.component('contato-vue', require('./components/Contato.vue').default);
 Vue.component('blog-vue', require('./components/Blog.vue').default);
 Vue.component('blog-upload', require('./components/UploadBlog.vue').default);
 Vue.component('blog-upload2', require('./components/UploadBlog2.vue').default);
+Vue.component('lead-vue', require('./components/Lead.vue').default);
 
 
 /**

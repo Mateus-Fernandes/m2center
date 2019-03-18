@@ -56,11 +56,18 @@ $this->group(['middleware' => ['auth'], 'namespace'=>'Admin', 'prefix' => 'admin
     
     $this->get('dashboard', 'DashboardController@index')->name('admin.dashboard');
     $this->get('dashboard/lista', 'DashboardController@lista')->name('dashboard.lista');
-    $this->post('dashboard/atualizar', 'DashboardController@atualizar')->name('dashboard.atualizar');    
-    
+    $this->post('dashboard/atualizar', 'DashboardController@atualizar')->name('dashboard.atualizar');
+        
+   
 });
 
-
+$this->group(['middleware' => ['auth']], function(){
+    $this->get('lead/lista', 'Site\LeadController@lista')->name('lead.lista');
+    $this->post('lead/excluir/{id}', 'Site\LeadController@excluir')->name('lead.excluir');    
+});
+$this->group(['namespace'=>'Site', 'prefix' => 'admin'], function(){
+    $this->get('lead', 'LeadController@index')->name('admin.lead');
+});
 $this->group(['namespace'=>'Admin', 'prefix' => 'api'], function(){
     $this->get('quemsomos/lista', 'QuemsomosController@lista')->name('quemsomos.lista');
     $this->get('equipe/lista', 'EquipeController@lista')->name('equipe.lista');
@@ -74,13 +81,15 @@ $this->group(['namespace'=>'Admin', 'prefix' => 'api'], function(){
 
 
 
+
+
 $this->get('/', 'Site\SiteController@index');
 $this->get('/quemsomos', 'Site\SiteController@index');
 $this->get('/blog', 'Site\SiteController@index');
 $this->get('/servicos', 'Site\SiteController@index');
 $this->get('/contato', 'Site\SiteController@index');
-$this->post('/envia', 'Site\SiteController@envia');
 $this->get('/blog/{id}', 'Site\SiteController@index');
+$this->post('/envia', 'Site\LeadController@adicionar');  
 
 Auth::routes();
 

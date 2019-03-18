@@ -45,9 +45,10 @@
                 <p><b>{{funcionamento_semana}}:</b> {{funcionamento_hora}}</p>
             </div>
             <div class="formulario" data-aos="fade-up">
-                <form @submit.prevent="enviar">
+                <form action="http://18.228.42.180/envia" method="post">
                     <div class="cadaInput">
-                            <input type="text" name="nome_envia" id="nome" placeholder="Nome completo" v-model="nome_envia" required>
+                            <input type="text" name="nome_lead" id="nome" placeholder="Nome completo" :class="{ 'is-invalid': hasError('nome_lead') }" v-model="form.nome_lead" required>
+                            <div v-if="hasError('nome_lead')" class="invalid-feedback">@{{ getError('nome_lead') }}</div>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -63,7 +64,8 @@
                            </svg>
                     </div>
                     <div class="cadaInput">
-                            <input type="email" name="email" id="email" placeholder="E-mail" v-model="email_envia" required>
+                            <input type="email" name="email_lead" id="email" placeholder="E-mail" :class="{ 'is-invalid': hasError('email_lead') }" v-model="form.email_lead" required>
+                            <div v-if="hasError('email_lead')" class="invalid-feedback">@{{ getError('email_lead') }}</div>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -79,7 +81,8 @@
                            </svg>
                     </div>
                     <div class="cadaInput">
-                            <input type="text" id="telefone" name="telefone" placeholder="Telefone" v-model="telefone_envia" required>
+                            <input type="text" id="telefone" name="telefone_lead" placeholder="Telefone" :class="{ 'is-invalid': hasError('telefone_lead') }" v-model="form.telefone_lead" required>
+                            <div v-if="hasError('telefone_lead')" class="invalid-feedback">@{{ getError('telefone_lead') }}</div>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -93,10 +96,10 @@
                            <path fill-rule="evenodd" id="form3" stroke="rgb(62, 62, 62)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                             d="M11.000,2.000 L557.000,2.000 C561.970,2.000 566.000,6.029 566.000,11.000 L566.000,77.000 C566.000,81.970 561.970,86.000 557.000,86.000 L11.000,86.000 C6.029,86.000 2.000,81.970 2.000,77.000 L2.000,11.000 C2.000,6.029 6.029,2.000 11.000,2.000 Z"/>
                            </svg>
-                           
                     </div>
                     <div class="cadaInput">
-                            <input type="text" id="mensagem" name="mensagem" placeholder="Mensagem" v-model="mensagem_envia" maxlength="200" required>
+                            <input type="text" id="mensagem" name="mensagem_lead" placeholder="Mensagem" :class="{ 'is-invalid': hasError('mensagem_lead') }" v-model="form.mensagem_lead" maxlength="200" required>
+                            <div v-if="hasError('mensagem_lead')" class="invalid-feedback">@{{ getError('mensagem_lead') }}</div>
                             <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -111,9 +114,13 @@
                             d="M11.000,2.000 L557.000,2.000 C561.970,2.000 566.000,6.029 566.000,11.000 L566.000,77.000 C566.000,81.970 561.970,86.000 557.000,86.000 L11.000,86.000 C6.029,86.000 2.000,81.970 2.000,77.000 L2.000,11.000 C2.000,6.029 6.029,2.000 11.000,2.000 Z"/>
                            </svg>
                            <FlashMessage></FlashMessage>
+                    </div>
+                    <div class="cadaInput">
+                        <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea"></div>
+                            
                     </div>                    
                     
-                    <button type="submit" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
+                    <button type="submit" @click.prevent="leaveFeedback()" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
                 </form>
             </div>
             <div class="dozecenter">
@@ -146,10 +153,13 @@ export default {
                 cidade: '',
                 bairro: '',
                 cep: '',
-                nome_envia:'',
-                mensagem_envia:'',
-                telefone_envia:'',
-                email_envia:'',
+                form: {
+                    nome_lead:'',
+                    mensagem_lead:'',
+                    nome_lead:'',
+                    email_lead:''
+                },
+                errors: {},
                 email: '',
                 funcionamento_semana: '',
                 funcionamento_hora: '',
@@ -173,35 +183,69 @@ export default {
                       
         },
         methods: {
+            leaveFeedback: function() {
+                    let form_data = new FormData();
+                    form_data.append('nome_lead', this.form.nome_lead);
+                    form_data.append('email_lead', this.form.email_lead);
+                    form_data.append('telefone_lead', this.form.telefone_lead);
+                    form_data.append('mensagem_lead', this.form.mensagem_lead);
+                    form_data.append('g-recaptcha-response', grecaptcha.getResponse());
+
+                    axios.post('http://18.228.42.180/envia', form_data)
+                        .then(response => {
+                            this.$swal({
+                                title: 'Mensagem enviada com sucesso!',
+                                type: 'success'
+                            });
+
+                            this.clearForm();
+                            this.resetRecaptcha();
+                        })
+                        .catch(error => {
+                            console.log(error.response.data);
+                            this.errors = error.response.data.errors;
+
+                            let errors_list = '';
+
+                            for (let field in this.errors) {
+                                errors_list += '<li class="list-group-item list-group-item-danger">' + this.errors[field][0] + '</li>';
+                            }
+
+                            this.$swal({
+                                title: error.response.data.message,
+                                type: 'error',
+                                html: '<ul class="list-group list-group-flush">' + errors_list + '</ul>'
+                            });
+                        });
+
+                },
+
+                clearForm: function() {
+                    this.form.nome_lead = '';
+                    this.form.email_lead = '';
+                    this.form.telefone_lead = '';
+                },
+
+                resetRecaptcha: function() {
+                    grecaptcha.reset();
+                },
+
+                anyErrors: function() {
+                    return Object.keys(this.errors).length > 0;
+                },
+
+                hasError: function(field) {
+                    return this.errors.hasOwnProperty(field);
+                },
+
+                getError: function(field){
+                    if (this.errors[field]) {
+                        return this.errors[field][0];
+                    }
+                },            
             afterEnter () {
                 this.$root.$emit('scrollAfterEnter');
-            },            
-            enviar(e) {
-                e.preventDefault();
-                let currentObj = this;
-                axios.post('http://18.228.42.180/envia', {
-                    nome_envia: this.nome_envia,
-                    telefone_envia: this.telefone_envia,
-                    email_envia: this.email_envia,
-                    mensagem_envia: this.mensagem_envia,
-                })
-                .then(function (response) {
-                    currentObj.flashMessage.show({status: 'success', title: 'Mensagem Enviada com sucesso!', message: 'Aguarde o contato da nossa equipe.'})
-                })
-                .catch(function (error) {
-                    if (error.response) {
-                    // The request was made, but the server responded with a status code
-                    // that falls out of the range of 2xx
-                    console.log(error.response.data);
-                    console.log(error.response.status);
-                    console.log(error.response.headers);
-                    } else {
-                    // Something happened in setting up the request that triggered an Error
-                    console.log('Error', error.message);
-                    }
-                    console.log(error.config);
-                });
-            }            
+            },                       
         },
 
 }
