@@ -2754,6 +2754,7 @@ __webpack_require__.r(__webpack_exports__);
       bairro: '',
       cep: '',
       nome_envia: '',
+      mensagem_envia: '',
       telefone_envia: '',
       email_envia: '',
       email: '',

@@ -147,6 +147,7 @@ export default {
                 bairro: '',
                 cep: '',
                 nome_envia:'',
+                mensagem_envia:'',
                 telefone_envia:'',
                 email_envia:'',
                 email: '',
