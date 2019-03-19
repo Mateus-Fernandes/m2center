@@ -107,7 +107,15 @@
         padding-bottom: 230px;
     }
   }
-  
+  @media screen and (min-width: 410px) and (max-width: 420px) {
+    .banner{
+    -webkit-mask-position-y: -90px !important;
+    }
+    #menu { margin: -118px 0 0 -323px;}
+   
+
+  }
+ 
   /* Celular */
   @media screen and (max-width: 600px) {
       body {
@@ -115,6 +123,9 @@
       }
       div#app {
         overflow-x: hidden;
+    }
+    .historia{
+        background: url(http://www.m2center.com.br/images/assets/historia-mobile.webp) no-repeat;
     }
       .stroke {
           display: none;
