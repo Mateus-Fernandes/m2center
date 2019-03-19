@@ -117,6 +117,10 @@
       .menuv2 {
           display: block;
       }
+      .servicos_header{
+        background-image: url(http://www.m2center.com.br/images/assets/nossos-servicos-v2_mobile.jpg);
+        padding-bottom: 100px;
+        }
       .banner h1 {
         font-size: 38px;
         line-height: 51px;
@@ -327,6 +331,7 @@
         fill: #262626;
         top: 85px;
     }
+
     div#contato .calltoaction {
         font-size: 13px;
     }
