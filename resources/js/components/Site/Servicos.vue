@@ -1,6 +1,6 @@
 <template>
 <div>
-    <section class="headerinterna servicos_header" style="background-image:url(http://www.m2center.com.br/images/assets/nossos-servicos-v3.jpg);">
+    <section class="headerinterna servicos_header" style="background-image:url(http://www.m2center.com.br/images/assets/nossos-servicos-v3.webp);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2>{{titulo_pag_servicos}}</h2>
