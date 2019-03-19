@@ -119,7 +119,7 @@
       }
       .servicos_header{
         background-image: url(http://www.m2center.com.br/images/assets/nossos-servicos-v2_mobile.jpg) !important;
-        padding-bottom: 100px;
+        padding-bottom: 230px;
         }
       .banner h1 {
         font-size: 38px;
@@ -455,7 +455,7 @@
         height: 100%;
     }
     .textodaPublicacao {
-        grid-column: span 12;
+        grid-column: span 12;    text-align: justify;
     }
     .sidebar {
         padding-left: 0rem;
