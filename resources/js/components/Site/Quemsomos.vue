@@ -5,7 +5,7 @@
             Seu navegador não suporta o elemento <code>video</code>.
             </video>
     </modal>  
-    <section class="headerinterna" style="background-image:url(http://www.m2center.com.br/images/assets/quem-somos.jpg);">
+    <section class="headerinterna quemsomos_header" style="background-image:url(http://www.m2center.com.br/images/assets/quem-somos.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2>{{titulo_qs}}</h2>

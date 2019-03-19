@@ -101,6 +101,11 @@
     .textoBlog h3 {
         font-size: 26px;
     }
+    nav ul li a { margin: 0 5px; }
+    .servicos_header{
+        background-image: url(http://www.m2center.com.br/images/assets/nossos-servicos-v2-tablet.jpg) !important;
+        padding-bottom: 230px;
+    }
   }
   
   /* Celular */
@@ -121,6 +126,16 @@
         background-image: url(http://www.m2center.com.br/images/assets/nossos-servicos-v2_mobile.jpg) !important;
         padding-bottom: 230px;
         }
+        .blog_header{
+            background-image: url(http://www.m2center.com.br/images/assets/blog-mobile.jpg) !important;
+        }
+        .quemsomos_header{
+            background-image: url(http://www.m2center.com.br/images/assets/quem-somos-mobile.jpg) !important;
+        }
+        .banner{
+            -webkit-mask-image: url(http://www.m2center.com.br/images/banner-mobile-02.svg);
+            mask-image: url(http://www.m2center.com.br/images/banner-mobile-02.svg);
+        }        
       .banner h1 {
         font-size: 38px;
         line-height: 51px;
@@ -136,6 +151,10 @@
         padding-top: 97px;
         padding-bottom: 180px;
     }
+    img.abs {
+        left: -451px;
+        width: 1672px;
+    }
     .separador1 {
         margin-top: -183px;
         position: relative;
@@ -143,6 +162,7 @@
         height: 94.41px;
         fill: #f0f0f0;
     }
+
     .diferencial {
         margin-top: -38px;
         z-index: 9;
