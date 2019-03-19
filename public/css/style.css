@@ -848,6 +848,10 @@ img.abs {
   position: relative;
 }
 
+.servicos_header {
+  padding-bottom: 332px !important;
+}
+
 .bolaServico {
   height: 239px;
   width: 79%;
@@ -2012,7 +2016,7 @@ section.conteudoBlog {
 
   .servicos_header {
     background-image: url(http://www.m2center.com.br/images/assets/nossos-servicos-v3_mobile.jpg) !important;
-    padding-bottom: 70px;
+    padding-bottom: 200px;
   }
 
   .blog_header {
