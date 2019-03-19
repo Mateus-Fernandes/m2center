@@ -25,5 +25,7 @@
 <script src="{{ mix('js/site.js') }}"></script>
 
 <script src="{{ mix('js/custom.js') }}"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
 </html>
