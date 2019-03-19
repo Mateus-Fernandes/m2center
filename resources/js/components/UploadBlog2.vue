@@ -24,6 +24,9 @@ export default {
 
 
         }
+    },
+        mounted() {
+        this.miniatura_blog = this.miniatura_blog;
     }
 }
 </script>

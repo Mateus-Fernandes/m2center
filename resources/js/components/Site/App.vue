@@ -8,16 +8,16 @@
             <div class="menu">
                     <nav role="navigation" class="menuv2">
                             <div id="menuToggle">
-                              <input type="checkbox" />
+                              <input type="checkbox" ref="rolesSelected"/>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             <ul id="menu">
-                                <li><router-link :to="{ name: 'home' }">Home</router-link></li>
-                                <li><router-link :to="{ name: 'quemsomos' }">Quem Somos</router-link></li>
-                                <li><router-link :to="{ name: 'servicos' }">Serviços</router-link></li>
-                                <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
-                                <li><a href="" v-scroll-to="'#contato'">Contato</a></li>
+                                <li @click="check()"><router-link :to="{ name: 'home' }" >Home</router-link></li>
+                                <li @click="check()"><router-link :to="{ name: 'quemsomos' }">Quem Somos</router-link></li>
+                                <li @click="check()"><router-link :to="{ name: 'servicos' }">Serviços</router-link></li>
+                                <li @click="check()"><router-link :to="{ name: 'blog' }">Blog</router-link></li>
+                                <li @click="check()"><a href="" v-scroll-to="'#contato'">Contato</a></li>
                             </ul>
                            </div>
                           </nav>
@@ -153,6 +153,7 @@ export default {
                 cidade: '',
                 bairro: '',
                 cep: '',
+                checked: false,
                 form: {
                     nome_lead:'',
                     mensagem_lead:'',
@@ -167,7 +168,6 @@ export default {
             };
         },
         mounted() {
-                
                 axios
                 .get('http://www.m2center.com.br/api/contato/lista')
                 .then(response => (
@@ -183,6 +183,9 @@ export default {
                       
         },
         methods: {
+            check: function() {
+                this.$refs.rolesSelected.checked = false;
+            },
             leaveFeedback: function() {
                     let form_data = new FormData();
                     form_data.append('nome_lead', this.form.nome_lead);

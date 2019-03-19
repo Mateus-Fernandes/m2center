@@ -1,10 +1,10 @@
 <template>
 <div>
-    <section class="headerinterna servicos_header" style="background-image:url(http://www.m2center.com.br/images/assets/nossos-servicos-v2.jpg);">
+    <section class="headerinterna servicos_header" style="background-image:url(http://www.m2center.com.br/images/assets/nossos-servicos-v3.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
-                <h2 style="opacity:0;">{{titulo_pag_servicos}}</h2>
-                <p style="opacity:0;">{{descricao_pag_servicos}}</p>
+                <h2>{{titulo_pag_servicos}}</h2>
+                <p>{{descricao_pag_servicos}}</p>
             </div>
         </div>
     </section>
