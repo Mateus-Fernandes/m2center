@@ -18,9 +18,11 @@
     </div>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" async defer></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js" async defer></script>
-<script src="{{ mix('js/site.js') }}" async></script>
-<script src="{{ mix('js/custom.js') }}" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
+
+<script src="{{ mix('js/site.js') }}"></script>
+
+<script src="{{ mix('js/custom.js') }}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
