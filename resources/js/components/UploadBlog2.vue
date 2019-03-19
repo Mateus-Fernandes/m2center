@@ -16,6 +16,7 @@
 
 
 export default {
+    props: ['miniatura_blogs'],
     data(){
         return{
 
@@ -26,9 +27,9 @@ export default {
         }
     },
         mounted() {
-        this.miniatura_blog = this.miniatura_blog;
+        this.miniatura_blog = this.miniatura_blogs;
 
-        
+
     }
 }
 </script>

@@ -27,7 +27,7 @@
                             <label>Título do Post:</label>
                         </div>
                         <blog-upload imagem_blogs="{{$blog->imagem_blog}}"></blog-upload>
-                        <blog-upload2></blog-upload2>
+                        <blog-upload2 miniatura_blogs="{{$blog->miniatura_blog}}"></blog-upload2>
                         <input type="hidden" value="1" name="user_id">
                         <div class="group">
                             <textarea id="historia" name="historia" class="form-control">{{$blog->texto_blog}}</textarea>

@@ -3277,13 +3277,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['miniatura_blogs'],
   data: function data() {
     return {
       miniatura_blog: ''
     };
   },
   mounted: function mounted() {
-    this.miniatura_blog = this.miniatura_blog;
+    this.miniatura_blog = this.miniatura_blogs;
   }
 });
 
