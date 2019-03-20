@@ -1,7 +1,16 @@
 <template>
 <div>
         <div class="banner">
-            <div class="example-slide"><img class="abs" src="http://www.m2center.com.br/images/banner01.webp" alt=""><div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>
+            <div class="example-slide">
+                <picture>
+                  <source srcset="http://www.m2center.com.br/images/banner01.webp" media="(min-width: 1400px)">
+                  <source srcset="http://www.m2center.com.br/images/banner01.webp" media="(min-width: 1200px)">
+                  <source srcset="http://www.m2center.com.br/images/banner01.webp" media="(min-width: 760px)">
+                  <source srcset="http://www.m2center.com.br/images/banner01-mobile.webp" media="(min-width: 400px)">
+                  <img src="http://www.m2center.com.br/images/banner01-mobile.webp" srcset="http://www.m2center.com.br/images/banner01-mobile.webp" alt="responsive image" class="abs">
+                </picture>                
+                
+                <div class="container"><div class="dozecenter dentroBanner"><h1><span>Inovação</span> e <span>Inteligência</span> de mercado <br> para alavancar suas vendas</h1></div></div></div>
         </div>
 
     <section class="historia">

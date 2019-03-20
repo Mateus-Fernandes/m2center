@@ -2,9 +2,8 @@ $preto: #333333;
 $laranja: #ff7214;
 $titulo: 42px;
 $paragrafo: 23px;
-input, textarea, select, button { 
-    font-family: 'Exo', sans-serif;
-}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700|Montserrat');
 
 @mixin gradiente {
     background: #ff4614; /* Old browsers */
@@ -17,11 +16,16 @@ input, textarea, select, button {
 
 body {
     margin: 0;
-    font-family: 'Exo', sans-serif;
+    font-family: Arial, serif;
     background: #f0f0f0;
     overflow-x: hidden;
 }
-
+body.exofont input, body.exofont textarea, body.exofont select, body.exofont button {
+    font-family: 'Exo', sans-serif;
+}
+.exofont{
+    font-family: 'Exo', sans-serif;
+}
 h2 {
     text-transform: uppercase;
     color: #333;
