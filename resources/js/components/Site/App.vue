@@ -117,7 +117,7 @@
                     </div>
                
                     
-                    <button type="submit" data-sitekey="6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea" data-callback='onSubmit' @click.prevent="leaveFeedback()" class="g-recaptcha calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
+                    <button type="submit" data-sitekey="6Lew6pgUAAAAAArkBbFBT25WJmFUqc2DeSAPmyar" data-callback='onSubmit' @click.prevent="leaveFeedback()" class="g-recaptcha calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
                 </form>
             </div>
             <div class="dozecenter">
