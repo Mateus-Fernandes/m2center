@@ -20,10 +20,7 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 #Gzip
-#Gzip
-<IfModule mod_headers.c>
-  Header set Connection keep-alive
-</IfModule>
+
 <IfModule mod_deflate.c>
   # Compress HTML, CSS, JavaScript, Text, XML and fonts
   AddOutputFilterByType DEFLATE application/javascript
