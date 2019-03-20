@@ -12,7 +12,7 @@ window.onload=function(){
     const nome = document.querySelector('#nome'),
     email = document.querySelector('#email'),
     telefone = document.querySelector('#telefone');
-nome.addEventListener('focus', (e) => { 
+    nome.addEventListener('focus', (e) => { 
     if (current) current.pause();
     current = anime({
             targets: '#form',

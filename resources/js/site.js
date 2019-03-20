@@ -12,8 +12,6 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import FlashMessage from '@smartweb/vue-flash-message';
-Vue.use(FlashMessage);
 var VueScrollTo = require('vue-scrollto');
 
 
@@ -48,12 +46,12 @@ Vue.use(VueRouter);
 // Componentes do site
 
 
-const App = () => './components/Site/App.vue'
-const home = () => './components/Site/Home.vue'
-const quemsomos = () => './components/Site/Quemsomos.vue'
-const servicos = () => './components/Site/Servicos.vue'
-const blog = () => './components/Site/Blog.vue'
-const bloginterno = () => './components/Site/Bloginterno.vue'
+import App from './components/Site/App.vue'
+import home from './components/Site/Home.vue'
+import quemsomos from './components/Site/Quemsomos.vue'
+import servicos from './components/Site/Servicos.vue'
+import blog from './components/Site/Blog.vue'
+import bloginterno from './components/Site/Bloginterno.vue'
 import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2);
 /**
