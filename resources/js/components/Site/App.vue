@@ -116,6 +116,7 @@
                            <FlashMessage></FlashMessage>
                     </div>
                     <div class="cadaInput">
+                        <div id="reca"></div>
                         <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea"></div>
                             
                     </div>                    

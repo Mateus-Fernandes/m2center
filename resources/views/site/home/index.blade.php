@@ -21,5 +21,12 @@
 <script src="{{ mix('js/site.js') }}"></script>
 
 <script src="{{ mix('js/custom.js') }}"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('reca', {
+          'sitekey' : '6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea'
+        });
+      };
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </html>
