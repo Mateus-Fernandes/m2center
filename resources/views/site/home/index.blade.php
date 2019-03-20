@@ -22,11 +22,9 @@
 
 <script src="{{ mix('js/custom.js') }}"></script>
 <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('reca', {
-          'sitekey' : '6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea'
-        });
-      };
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
 </script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>

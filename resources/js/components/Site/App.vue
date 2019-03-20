@@ -45,7 +45,7 @@
                 <p><b>{{funcionamento_semana}}:</b> {{funcionamento_hora}}</p>
             </div>
             <div class="formulario" data-aos="fade-up">
-                <form action="http://www.m2center.com.br/envia" method="post">
+                <form action="http://www.m2center.com.br/envia" method="post" id="demo-form">
                     <div class="cadaInput">
                             <input type="text" name="nome_lead" id="nome" placeholder="Nome completo" :class="{ 'is-invalid': hasError('nome_lead') }" v-model="form.nome_lead" required>
                             <div v-if="hasError('nome_lead')" class="invalid-feedback">@{{ getError('nome_lead') }}</div>
@@ -115,13 +115,9 @@
                            </svg>
                            <FlashMessage></FlashMessage>
                     </div>
-                    <div class="cadaInput">
-                        <div id="reca"></div>
-                        <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea"></div>
-                            
-                    </div>                    
+               
                     
-                    <button type="submit" @click.prevent="leaveFeedback()" class="calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
+                    <button type="submit" data-sitekey="6LcIdZgUAAAAALMvFC9boMUKhm8T0l5_UeFOcLea" data-callback='onSubmit' @click.prevent="leaveFeedback()" class="g-recaptcha calltoaction fundopreto" data-aos="fade-in">Enviar Mensagem</button>
                 </form>
             </div>
             <div class="dozecenter">
