@@ -65,7 +65,11 @@
         height: 157px;
     }
     .imagemMembro {
-        max-height: 327px;
+        padding: 0 11px;
+        box-shadow: none;
+        max-height: 398px;
+        position: relative;
+        left: 18px;
     }
     .textoMembro svg {
         top: 0;
@@ -164,8 +168,9 @@
         padding-bottom: 180px;
     }
     img.abs {
-        left: -451px;
-        width: 1672px;
+        left: 0;
+        width: auto;
+        top: 0;
     }
     .separador1 {
         margin-top: -183px;

@@ -1,10 +1,5 @@
 <template>
 <div>
-    <modal name="hello-world" width="900" height="auto" :resizable="true" :scrollable="true">
-            <video :src="video" controls>
-            Seu navegador não suporta o elemento <code>video</code>.
-            </video>
-    </modal>  
     <section class="headerinterna quemsomos_header" style="background-image:url(http://www.m2center.com.br/images/assets/quem-somos.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
