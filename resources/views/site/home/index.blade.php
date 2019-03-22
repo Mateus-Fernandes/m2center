@@ -10,7 +10,15 @@
     <link rel="stylesheet" media="none" onload="document.body.className+='exofont'; this.media='all';" type="text/css" href="{{ mix('css/style.css') }}">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136764000-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-136764000-1');
+    </script>
 </head>
 <body>
     <div id="app">
