@@ -1,6 +1,6 @@
 <template>
 <div>
-    <section class="headerinterna blog_header" style="background-image:url(http://www.m2center.com.br/images/assets/blog.webp);">
+    <section class="headerinterna blog_header" style="background-image:url(http://www.m2center.com.br/images/assets/blog.jpg);">
         <div class="container">
             <div class="dozecenter tituloInterna" data-aos="flip-down">
                 <h2>{{titulo_pag_blog}}</h2>
