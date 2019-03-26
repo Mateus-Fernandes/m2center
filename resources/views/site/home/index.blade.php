@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Há cinco anos no mercado de vendas de alta performance, somos uma empresa de aquisição de clientes baseada em performance que usa tecnologia e dados para proporcionar experiências de compra mais inteligentes e otimizadas. A M2 Center se estabelece como uma empresa diferenciada no que se refere a suas buscas e objetivos para alcançar inovação e tecnologia ao mesmo tempo. ">
     <meta name="keywords" content="Vendas em Ribeirão Preto, Tecnologia Ribeirão Preto, Web Ribeirão, Performace em Vendas, Marketing Digital Ribeirão Preto, Marketing Ribeirão, Vivo Ribeirão, Dados Ribeirão">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('images/favicon.png') }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/brands.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/fontawesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/regular.min.css" crossorigin="anonymous">    
