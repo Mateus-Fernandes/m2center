@@ -69,7 +69,7 @@ const router = new VueRouter({
             path: '/',
             name: 'home',
             component: home,
-            meta: {title:'M2 Center'}
+            meta: {title:'M2 Center - Inovação e Inteligência de mercado para alavancar suas vendas'}
         },
         {
             path: '/quemsomos',
