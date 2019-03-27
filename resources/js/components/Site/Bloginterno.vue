@@ -49,13 +49,18 @@
 
 <script>
 export default {
+    
         data() {
             return {
                 blog: [],                 
                 titulo_blog: '',
                 data: '',
                 texto_blog: '',
-                imagem_blog:''                                        
+                imagem_blog:'',
+                metaInfo: {
+                    // title will be injected into parent titleTemplate
+                    title: titulo_blog
+                }                                                        
             }
         },
         mounted() {

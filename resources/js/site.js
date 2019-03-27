@@ -29,8 +29,9 @@ Vue.use(VueScrollTo, {
     x: false,
     y: true
 });
-Vue.use(VueRouter);
-
+Vue.use(VueRouter)
+import Meta from 'vue-meta'
+Vue.use(Meta)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -92,7 +93,6 @@ const router = new VueRouter({
         {
             path: '/blog/:id',
             component: bloginterno,
-            meta: {title:'M2 Center - Blog'}
         },                                  
     ],
 })
