@@ -63,7 +63,7 @@ export default {
         metaInfo() {
             return{
                 // title will be injected into parent titleTemplate
-                title: this.titulo_blog
+                title: this.titulo_blog + 'Blog - M2 Center'
             }
 
         },        
