@@ -59,7 +59,7 @@ export default {
                 imagem_blog:'',
                 metaInfo: {
                     // title will be injected into parent titleTemplate
-                    title: titulo_blog
+                    title: this.titulo_blog
                 }                                                        
             }
         },
