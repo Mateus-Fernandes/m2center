@@ -57,12 +57,16 @@ export default {
                 data: '',
                 texto_blog: '',
                 imagem_blog:'',
-                metaInfo: {
-                    // title will be injected into parent titleTemplate
-                    title: this.titulo_blog
-                }                                                        
+                                                       
             }
         },
+        metaInfo() {
+            return{
+                // title will be injected into parent titleTemplate
+                title: this.titulo_blog
+            }
+
+        },        
         mounted() {
                 var _this = this;
                 let rota = this.$route.params.id;
